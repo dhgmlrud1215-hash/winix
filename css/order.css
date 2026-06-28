@@ -1,0 +1,168 @@
+@charset "utf-8";
+
+*,*:after, *:before {box-sizing: border-box;}
+a {text-decoration: none;color: black; 
+    font-family: 'Noto Sans', sans-serif;}
+h1, p {font-family: 'Noto Sans', sans-serif;}
+h2 {color: rgba(63, 91, 216, 0.75); margin-bottom: 10px;}
+button {background: none; border: none; cursor: pointer;}
+body {padding-top: 25px;  padding:0 10px 10px 10px;}
+
+
+.otop {display: flex; justify-content: center; align-items: center;
+        margin-top: 40px; position: relative; margin-bottom: 10px;}
+.otop h2 {color: black;}
+.otop a {position: absolute; left: 0; font-size: 30px;
+            margin-bottom: 10px;}
+
+.information1,
+.information2,
+.information3,
+.information4 {
+  background: #fff;
+  border-bottom: 8px solid #f5f6f8;
+  padding: 20px 0;
+}
+
+.information1 > h3,
+.information2 > h3,
+.information3 > h3,
+.information4 > h3 {
+  border-bottom: 1px solid #000; 
+  margin: 0 0 14px;
+  padding-bottom: 5px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #222;
+}
+
+
+
+.igroup1 {margin-bottom: 30px;;}
+
+.igroup1 input {display: block; width: 100%; height: 40px; 
+    border:none; border: 1px solid #D8D8D8; border-radius: 5px;
+    margin-bottom: 10px; text-indent: 10px;}
+
+.addressbox >span {display: flex; width: 100%;}
+.addressbox >span button {border: 1px solid #000; border-radius: 5px;
+        height:40px;  background: #000;
+        color: #fff; width: 75px;}
+.addressbox >span input {background: #F2F2F2; border: none;
+            border: 1px solid #F2F2F2; width: 96%; margin-right: 10px;}
+
+select {border: none; border: 1px solid #D8D8D8; border-radius: 5px;
+        height: 40px; width: 100%; color: rgba(0,0,0,0.5)}
+
+
+.igroup2 {display: flex; margin-top: 10px;}
+.igroup2 img {width: 100%; max-width: 50%;}
+.igroup2 li  {margin-left: 10px; position: relative; font-size: .7rem;}
+.ig2_1 {position: absolute; bottom: 0; }
+.ig2_1 li {display: flex; gap: 5px;}
+.c_n  {color: #D8D8D8;}
+
+
+.information3>h3 {margin-top: 20px;}
+.igroup3_1 {margin-top: 5px;margin-right: 10px;}
+.o_check {width: 15px; height: 15px; border-radius: 50%; margin-left: 10px;}
+.igroup3_2 {display: grid; grid-template-columns: repeat(2,auto);}
+
+.igroup3_2 button {margin: 10px; border: 1px solid #d8d8d8;
+        padding: 10px; border-radius: 5px; font-weight: 500;}
+.igroup3_2 button:hover {
+        background: #000; 
+        color: #fff;
+}
+
+
+.information4>h3 { margin-top: 20px;}
+.igroup4 {margin-top: 5px; display: flex; justify-content: space-between;}
+.igroup4 ul li {line-height: 2; font-size: 1.2rem; font-weight: 400;}
+.c_n {text-align: right;}
+.ig4_1 {color: rgba(63, 91, 216, 0.75); border-top: 1px solid #d8d8d8;
+        display: flex; justify-content: space-between; font-size: 1.2rem; padding: 10px 0 10px 0;
+        font-weight: 500; border-bottom: 1px solid #d8d8d8;}
+
+.information5 ul li{display: flex; padding:5px 0 5px 0 ; gap: 5px;}
+.information5 input {width: 10px; height: 10px; }
+.information5 span {font-size: .7rem;word-break: keep-all;}
+
+.o_btn {
+        margin: 24px 0 90px;
+        text-align: center; 
+        border-radius: 10px;
+        padding: 7px; 
+        background: rgba(63, 91, 216, 0.8);
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+}
+
+.o_btn button { 
+        color: #fff; 
+        font-weight: 700;
+         font-size: 1rem;
+}
+
+.o_btn button:active {
+        transform: translateY(2px);
+}
+
+
+.blind {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+}
+
+
+.bar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background: #F2F2F2;
+    z-index: 999;
+    border-top: 1px solid #ccc;
+}
+
+.bar ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.bar ul li {
+    flex: 1;
+    text-align: center;
+}
+
+.bar a,
+.bar span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+    line-height: 1.3;
+    color: #333;
+}
+
+.bar svg {
+    width: 26px;
+    height: 26px;
+    margin-bottom: 4px;
+    stroke: #000;
+    fill: none;
+}

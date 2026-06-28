@@ -1,0 +1,155 @@
+<?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css?v=3">
+    <link rel="stylesheet" href="css/common-menu.css?v=3">
+    <script src="js/common-menu.js?v=3" defer></script>
+    <link rel="stylesheet" href="css/live.css">
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/live-slider.js"></script>
+</head>
+<body>
+    <header id="live-head">
+        <a href="main.html" aria-label="이전 페이지로 이동">&larr;</a>
+        <h1>WIN<span>IX</span></h1>
+    </header>
+    
+    <section class="live">
+        <div class="section-head">
+            <h2>지금 방송 중인 LIVE</h2>
+            <p class="section-sub">위닉스의 실시간 라이브를 만나보세요</p>
+        </div>
+
+        <div class="live-group">
+            <button type="button"  aria-label="라이브 방송 재생">
+               <img src="img_live/Circled Play Button.png">
+            </button>
+
+            <p>방송중인 LIVE가 없습니다.</p>
+        </div>
+    </section>
+
+    <section class="live2">
+        <div class="section-head">
+            <h2>예정된 라이브 방송</h2>
+            <p class="section-sub">곧 시작되는 위닉스 라이브 일정</p>
+        </div>
+
+        <div class="live2-group">
+            <img src="img_live/live.png" alt="위닉스 신상 건조기 라이브 방송 이미지">
+
+            <div class="info">
+                <p class="time">05/07(화) 07:00PM</p>
+
+                <p class="name">위닉스SHOW-2026 신상 건조기 LIVE</p>
+
+                <p class="txt">
+                    2026년형 최신 모델로 돌아온 라이브 🎉 신규 기능 탑재로 더 편해지고, 라이브 한정 혜택가 + 전원 증정 포토리뷰 이벤트까지! 겨울 빨래 고민 끝, 지금 가장 합리적인 조건으로 만나보세요. 
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="limited">
+        <div class="section-head">
+            <h2>한정 타임딜</h2>
+            <p class="section-sub">지금만 만나볼 수 있는 특별한 가격</p>
+        </div>
+
+        <div class="limited-wrap">
+
+            <button type="button" aria-label="타임딜 상품 이전 보기" class="limi-left">&lt;</button>
+
+        <div class="limited-track">    
+         <div class="limited-group">
+            <img src="img_live/time1.png" alt="창문형에어컨">
+
+            <div class="item">
+                <p class="serial">EWNH067-MWK</p>
+                <strong>창문형에어컨(사선형)</strong>
+                <p class="sub-txt">새로운 바람을 담다</p>
+
+                <div class="price-box">
+                    <span class="discount">19%</span>
+                    <span class="sale-price">599,000원</span>
+                    <span class="original">739,000원</span>
+                </div>
+
+                <button>타임딜 <span>00:00:00</span> 후 예정</button>
+            </div>
+         </div>
+
+         <div class="limited-group">
+            <img src="img_live/time2.png" alt="타워프라임 플러스">
+
+            <div class="item">
+                <p class="serial">ATTM115-MWK</p>
+                <strong>타워프라임 플러스</strong>
+                <p class="sub-txt">공기를 공기답게</p>
+
+                <div class="price-box">
+                    <span class="discount">25%</span>
+                    <span class="sale-price">389,000원</span>
+                    <span class="original">519,000원</span>
+                </div>
+
+                <button>타임딜 <span>00:00:00</span> 후 예정</button>
+            </div>
+         </div>
+
+         <div class="limited-group">
+            <img src="img_live/time3.png" alt="위닉스 뽀송 12L">
+
+            <div class="item">
+                <p class="serial">DXAW120-NYK</p>
+                <strong>위닉스뽀송 12L</strong>
+                <p class="sub-txt">퓨어그레이</p>
+
+                <div class="price-box">
+                    <span class="discount">19%</span>
+                    <span class="sale-price">209,000원</span>
+                    <span class="original">259,000원</span>
+                </div>
+
+                <button>타임딜 <span>00:00:00</span> 후 예정</button>
+            </div>
+         </div>
+
+         <div class="limited-group">
+            <img src="img_live/time4.png" alt="인버터 컴팩트 건조기">
+
+            <div class="item">
+               <div class="item-info"> 
+                    <p class="serial">HS4E400-OYK</p>
+                    <strong>인버터 컴팩트건조기S</strong>
+                    <p class="sub-txt">스페이스 그레이</p>
+                </div>
+
+                <div class="price-box">
+                    <span class="discount">18%</span>
+                    <span class="sale-price">329,000원</span>
+                    <span class="original">399,000원</span>
+                </div>
+
+                <button type="button">타임딜 <span>00:00:00</span> 후 예정</button>
+            </div>
+         </div>
+        </div>
+        
+         <button type="button" class="limi-right" aria-label="타임딜 상품 다음 보기">&gt;</button>
+
+        </div>
+    </section>
+
+    <?php include "bar.php";?>
+</body>
+
+ 
+</html>

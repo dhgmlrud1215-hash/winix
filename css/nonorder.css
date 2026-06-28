@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+*,*:after, *:before {box-sizing: border-box;}
+a {text-decoration: none;color: black; 
+    font-family: 'Noto Sans', sans-serif;}
+h1, p {font-family: 'Noto Sans', sans-serif;}
+h2 {color: rgba(63, 91, 216, 0.75); margin-bottom: 10px;}
+button {background: none; border: none; cursor: pointer;}
+body {padding-top: 25px;}
+
+.nontop {display: flex; justify-content: center; align-items: center;
+        margin-top: 20px; position: relative; margin-bottom: 10px; 
+        border-bottom: 1px solid #000;}
+.nontop h2 {color: black;}
+.nontop a {position: absolute; left: 0; bottom: 10px; font-size: 20px;}
+
+
+.non-wrap {
+    max-width: 450px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.nonorder {margin-bottom: 10px; padding:0 10px 10px 10px;}
+.non1 ul {margin-bottom: 10px;}
+.non1 p {font-weight: 500;}
+.non1 input {width: 100%; border-radius: 5px; border: none; 
+        border:1px solid rgba(0,0,0,0.4) ; height: 30px; margin-top: 5px;}
+
+.non2 {text-align: center; margin: 20px 10px 30px 10px; border: 1px solid #F2F2F2;
+    background: #F2F2F2; padding: 5px; border-radius: 5px; }
+
+.box ul {  
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+
+    background: #EAF1F8;
+    padding: 30px;
+    list-style: none;}
+
+.box ul li {
+    background: #fff;
+    border-radius: 15px;
+
+    padding: 15px;
+    text-align: center;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+    transition: 0.3s;}
+
+.box li:hover {transform: translateY(-5px);}
+
+.box a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    text-decoration: none;
+    color: #000;
+}
+
+.box img {
+    width: 40px;
+    height: 40px;
+}
+
+.box p {font-size: 0.85rem;}
+
+.bar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background: #F2F2F2;
+    z-index: 999;
+    border-top: 1px solid #ccc;
+}
+
+.bar ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.bar ul li {
+    flex: 1;
+    text-align: center;
+}
+
+.bar a,
+.bar span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+    line-height: 1.3;
+    color: #333;
+}
+
+.bar svg {
+    width: 26px;
+    height: 26px;
+    margin-bottom: 4px;
+    stroke: #000;
+    fill: none;
+}

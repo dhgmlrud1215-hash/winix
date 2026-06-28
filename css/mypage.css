@@ -1,0 +1,124 @@
+
+*,*:after, *:before {box-sizing: border-box;}
+a {text-decoration: none;color: black;}
+h1, p {font-family: 'Noto Sans', sans-serif;}
+h2 { margin-bottom: 10px;}
+button {background: none; border: none; cursor: pointer;}
+body {padding-top: 25px; padding-bottom: 70px; font-family: 'Noto Sans', sans-serif;}
+
+
+.mytop {display: flex; justify-content: center; align-items: center;
+         position: relative; border-bottom: 1px solid #000;}
+
+h2 { font-size: 1.7rem; font-weight: 700; line-height: 1;
+    margin-top: 2px;}
+
+.mytop a {position: absolute; left: 10px;
+  top: 40%; transform: translateY(-50%); padding: 8px;}
+
+.mytop button {
+  font-size: 22px;
+  line-height: 1;
+}
+span {color: rgba(63, 91, 216, 0.75);}
+
+
+.my-info {padding: 10px 0 0 20px;  border-bottom: 1px solid #F2F2F2;
+            height: 120px;}
+.name {display: flex;}
+.name >h3 {font-size: 25px; font-weight: 500;
+            margin-right: 10px;}
+.name > p {margin-top: 10px;}
+.name >p:after {content: " >";}
+p {font-weight: 300; font-size: 13px;}
+
+
+.my-group {width: 100%;  border-top: 1px solid #f2f2f2;
+        border-bottom: 1px solid #f2f2f2;}
+.my-produ {height: 90px; padding: 20px; position: relative;
+             border-bottom: 1px solid #f2f2f2;}
+.my-produ .count {position: absolute; right: 0;  bottom: 0;
+                padding:0 20px 20px 0; font-weight: bold;}
+
+.mypage-summary {display: flex; height: 90px;}                
+.summary-item {width: 50%; padding: 20px; display: flex; position: relative;
+    flex-direction: column; justify-content: space-between;}
+.summary-item .count {position: absolute; right: 0; bottom: 0;
+                    padding:0 20px 20px 0; font-weight: bold;}
+.summary-item:first-child {border-right: 1px solid #f2f2f2;}
+
+.my-list a {height: 50px; padding: 20px;
+            border-bottom: 1px solid #f2f2f2; font-size: 15px;
+            font-weight: 400; display: flex; align-items: center;}
+
+.btn-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.mybtn {
+    padding: 10px 80px;
+    border: 1px solid #f2f2f2;
+    border-radius: 5px;
+
+    margin-top: 100px;
+
+    font-size: 1.1rem;
+    font-weight: 500;
+
+    background: #fff;
+}
+
+.mybtn:hover {
+    background: #000;
+    color: #fff;
+}
+
+
+
+
+
+.bar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background: #F2F2F2;
+    z-index: 999;
+    border-top: 1px solid #ccc;
+}
+
+.bar ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.bar ul li {
+    flex: 1;
+    text-align: center;
+}
+
+.bar a,
+.bar span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+    line-height: 1.3;
+    color: #333;
+}
+
+.bar svg {
+    width: 26px;
+    height: 26px;
+    margin-bottom: 4px;
+    stroke: #000;
+    fill: none;
+}

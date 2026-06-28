@@ -1,0 +1,371 @@
+<?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="img/favicon.png">
+
+    <link rel="stylesheet" href="css/reset.css?v=3">
+    <link rel="stylesheet" href="css/common-menu.css?v=3">
+    <script src="js/common-menu.js?v=3" defer></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/more.js"></script>
+    <script src="js/slider.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+<div class="modal_back"></div>
+    
+    <a href="#menu" class="skip-link">메뉴 바로가기</a>
+    <a href="#mainbanner" class="skip-link">메인 콘텐츠 바로가기</a>
+
+    <header id="head">
+        <div class="top">
+            <ul>
+                <li>
+                    <button class="hm"><img src="img/ham.png" alt="메뉴열기"></button>
+                </li>
+                <li><a href="#" class="logo">WIN<span>IX</span></a></li>
+                <li class="pr"><a href="productregi01.html">제품<br>등록</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <nav id="menu">
+        <div class="mm">
+            <button class="arrow" aria-label="전체 메뉴 닫기">&#8592;</button>
+            <p class="mlogo">WIN<span>IX</span></p>
+        </div>
+
+    <div class="search">
+        <input type="text" placeholder="검색어를 입력하세요.">
+        <img src="img/search.png" alt="검색">
+    </div>
+    
+    
+    <ul class="mm2">
+    <li><a href="#">회사소개</a>
+        <ul class="sub">
+            <li><a href="#">기업소개</a></li>
+            <li><a href="#">연혁</a></li>
+            <li><a href="#">CI 스토리</a></li>
+            <li><a href="#">사이버신문고</a></li>
+        </ul>    
+    </li>
+
+    <li><a href="#">제품</a>
+        <ul class="sub">
+            <li><a href="sub.html">공기청정기</a></li>
+            <li><a href="#">가습기</a></li>
+            <li><a href="#">건조기</a></li>
+            <li><a href="#">제습기</a></li>
+            <li><a href="#">온풍기</a></li>
+            <li><a href="#">창문형에어컨</a></li>
+            <li class="red"><a href="#">MOOS</a></li>
+        </ul>
+    </li>    
+
+    <li><a href="#">소모품</a>
+        <ul class="sub">
+            <li><a href="#">공기청정기</a></li>
+            <li><a href="#">가습기</a></li>
+            <li><a href="#">건조기</a></li>
+            <li><a href="#">제습기</a></li>
+            <li><a href="#">온풍기</a></li>
+            <li><a href="#">창문형에어컨</a></li>
+            <li><a href="#">펫 자동급식기</a></li>
+        </ul>    
+    </li>
+
+    <li><a href="#">서비스</a>
+        <ul class="sub">
+            <li><a href="#">케어서비스</a></li>
+            <li><a href="#">에어컨설치</a></li>
+            <li><a href="#">서비스센터 찾기</a></li>
+        </ul>    
+    </li>
+
+    <li><a href="#">고객지원</a>
+        <ul class="sub">
+            <li><a href="#">구매/서비스 FAQ</a></li>
+            <li><a href="#">공지사항</a></li>
+            <li><a href="#">A/S 접수</a></li>
+            <li><a href="#">급수필터 택배신청</a></li>
+            <li><a href="#">사용설명서 찾기</a></li>
+        </ul>    
+    </li>
+
+    <li><a href="#">이벤트</a>
+        <ul class="sub">
+            <li><a href="#">전체이벤트</a></li>
+            <li><a href="#">타임딜</a></li>
+        </ul>    
+    </li>
+
+    <li><a href="#">마이페이지</a>
+        <ul class="sub">
+            <li><a href="#">내가 등록한 제품</a></li>
+            <li><a href="#">사용 가능한 쿠폰</a></li>
+            <li><a href="#">내 스크랩 상품</a></li>
+            <li><a href="#">배송지관리</a></li>
+            <li><a href="#">주문취소/반품/교환내역</a></li>
+            <li><a href="#">결제수단관리</a></li>
+        </ul> 
+    </li>   
+    </ul>
+</nav>
+
+    <div id="mainbanner">
+        <ul class="slider">
+           <li> <img src="img/main1.png" alt="메인배너1"></li>
+            <li><img src="img/main2.png" alt="메인배너2"></li>
+            <li><img src="img/main3.png" alt="메인배너3"></li>
+            <li><img src="img/main4.png" alt="메인배너4"></li>
+            <li><img src="img/main5.png" alt="메인배너5"></li>
+            <li><img src="img/main6.png" alt="메인배너6"></li>
+        </ul>
+
+        
+        <div id="idc">
+            <div class="idc_on" aria-label="1번 메인 배너 보기"><a href="#"></a></div>
+            <div><a href="#" aria-label="2번 메인 배너 보기"></a></div>
+            <div><a href="#" aria-label="3번 메인 배너 보기"></a></div>
+            <div><a href="#" aria-label="4번 메인 배너 보기"></a></div>
+            <div><a href="#" aria-label="5번 메인 배너 보기"></a></div>
+            <div><a href="#" aria-label="6번 메인 배너 보기"></a></div>
+        </div> 
+    </div>
+
+    <section id="maincate"> 
+    <ul class="mgroup">
+        <li><a href="sub.html"><img src="img/ka1.png" alt="공기청정기"><p>공기청정기</p></a></li> 
+        <li><a href="#"><img src="img/ka2.png" alt="가습기"><p>가습기</p></a></li>
+        <li><a href="#"><img src="img/ka3.png" alt="건조기"><p>건조기</p></a></li>
+        <li><a href="#"><img src="img/ka4.png" alt="제습기"><p>제습기</p></a></li>
+        <li class="cate01"><a href="#"><img src="img/ka5.png" alt="온풍기"><p>온풍기</p></a></li>
+        <li class="cate02"><a href="#"><img src="img/ka6.png" alt="정수기"><p>정수기</p></a></li>
+        <li class="cate03"><a href="#"><img src="img/ka7.png" alt="창문형에어컨"><p>창문형에어컨</p></a></li>
+        <li class="cate04"><a href="#"><img src="img/ka8.png" alt="MOOS"><p>MOOS</p></a></li>     
+    </ul>
+
+    <div class="mbtn">
+        <button type="button" class="cate-toggle">더보기</button>
+    </div>
+
+    </section>
+
+
+    <section id="mbest">
+       <div class="section-head">
+        <h2>쾌적한 일상을 위한 추천</h2>
+
+            <p class="section-sub">고객들이 가장 많이 찾는 위닉스 제품</p>
+        </div>
+       <button class="bleft" aria-label="베스트 상품 이전 보기">&lt;</button>
+        <div class="bestslider">
+    
+            <ul>
+                <li><a href="sub_2(best).html"><img src="img/mbest1.png" alt="베스트아이템1">위닉스 뽀송 12L</a></li>
+                <li><a href="#"><img src="img/mbest2.png" alt="베스트아이템2">올바를 가습기 <br>스테인리스 4.0L</a></li> 
+                <li><a href="#"><img src="img/mbest3.png" alt="베스트아이템3">인버터 컴팩트 건조기</a></li>
+                <li><a href="#"><img src="img/mbest4.png" alt="베스트아이템4">공기청정기 필터</a></li>
+            </ul>
+        
+        </div>
+            <button class="bright" aria-label="베스트 상품 다음 보기">&gt;</button>
+    </section>
+
+    <section id="mevent">
+        <div class="section-head">
+            <h2>진행 중인 혜택</h2>
+
+            <p class="section-sub">위닉스가 준비한 특별한 프로모션</p>
+        </div>
+
+        <button class="eleft" aria-label="이벤트 이전 보기">&lt;</button>
+        <div class="evslider">
+            
+            <ul>
+                <li><img src="img/event banner3.png" alt="이벤트배너1"></li>
+                <li><img src="img/event banner2.png" alt="이벤트배너2"></li>
+                <li><img src="img/event banner1.png" alt="이벤트배너3"></li>
+                <li><img src="img/event banner4.png" alt="이벤트배너4"></li>
+            </ul>
+        
+       </div>
+           <button class="eright" aria-label="이벤트 다음 보기">&gt;</button>
+    </section>
+    
+    <section id="mreview">
+        <div class="section-head">
+            <h2>실제 사용 후기</h2>
+
+            <p class="section-sub">고객들이 직접 경험한 위닉스의 쾌적함</p>
+        </div>
+        
+        <div class="reslider">
+        <div class="mrgroup">
+            <div class="re">
+                <ul>
+                    <li class="r">
+                        <img src="img/r1.webp" alt="리뷰1">
+                        <p>오래된 창틀도 약간 머리 썻지만, 그리 어렵지 않게 설치가능요.소음 타 회사것보다 결코 시끄럽지 않고.. 오히려 적어요.
+                        추천의향 있습니다. 제품 좋아요</p>
+                    </li>
+                </ul>
+
+                <div class="review-tag">
+                    <span>#설치쉬움</span>
+                    <span>#저소음</span>
+                </div>
+            
+                <div class="rm">
+                        <a href="#">
+                            <img src="img/rm1.png" alt="리뷰관련상품1">
+                            <span class="rm-title">창문형 에어컨(세로형) 보러가기 ›</span>
+                        </a>
+                </div>
+            </div>
+
+            <div class="re">
+                <ul>
+                <li class="r"><img src="img/r2.webp" alt="리뷰2">
+                <p>원룸에서 한달째 사용중입니다.좁은공간에 빨래건조대를 계속 펴놓고 있을 수도 없고 건조기 없었으면 정말 큰일날뻔했어요.아주 만족합니다👍🏻👍🏻</p></li>
+                </ul>
+
+                <div class="review-tag">
+                    <span>#원룸추천</span>
+                    <span>#건조만족</span>
+                </div>
+
+                <div class="rm">
+                        <a href="#">
+                            <img src="img/rm2.png" alt="리뷰관련상품2">
+                            <span class="rm-title">인버터 컴팩트 건조기 보러가기 ›</span>
+                        </a>
+                </div>
+            </div>
+
+            <div class="re">
+                <ul>
+                    <li class="r"><img src="img/r3.webp" alt="리뷰3">
+                    <p>제품 디자인도 방 분위기랑 잘맞고 기능도 너무 좋아여 15년째 위닉스만 쓰는데 품질 성능 너무 만족 스럽네요 좋은제 품 잘쓸께요</p></li>
+                </ul>
+
+                <div class="review-tag">
+                    <span>#디자인만족</span>
+                    <span>#성능만족</span>
+                </div>
+
+                <div class="rm">
+                        <a href="#">
+                            <img src="img/rm3.png" alt="리뷰관련상품3">
+                            <span class="rm-title">위닉스 뽀송 인버터 보러가기 ›</span>
+                        </a>
+                </div>
+            </div>
+
+            <div class="re">
+                <ul>
+                    <li class="r"><img src="img/r4.webp" alt="리뷰4">
+                    <p>타워XQ 제품 잘 사용하고 있고 이사하면서 추가로 구매했어요.타사 제품과 비교해도 합리적인 가격에 성능까지 좋아서 만족스러워요.</p></li>
+                </ul>
+                
+                <div class="review-tag">
+                    <span>#합리적가격</span>
+                    <span>#공기청정</span>
+                </div>
+
+                <div class="rm">
+                        <a href="#">
+                            <img src="img/rm4.png" alt="리뷰관련상품4">
+                            <span  class="rm-title">타워프라임 플러스 보러가기 ›</span>
+                        </a>
+
+                    
+                </div>
+            </div>
+        </div>
+
+       <div class="review-more">
+            <a href="#">리뷰 더보기 <span aria-hidden="true">›</span></a>
+        </div>
+    </div>
+    </section>
+
+<div class="scroll-container">
+        <a href="main.html" class="mtop" aria-label="맨 위로 이동">↑</a>
+</div>
+
+<div class="box">
+        <ul>
+            <li>
+                <a href="#"><img src="img_nonorder/f1.png" alt="A/S 접수"></a>
+                <p>A/S 접수</p>
+            </li>
+       
+            <li>
+                <a href="#"><img src="img_nonorder/f2.png" alt="제품 FAQ"></a>
+                <p>제품 FAQ</p>
+            </li>
+        
+            <li>
+                <a href="#"><img src="img_nonorder/f3.png" alt="공지사항"></a>
+                <p>공지사항</p>
+            </li>
+       
+            <li>
+                <a href="#"><img src="img_nonorder/f4.png" alt="구매 FAQ"></a>
+                <p>구매 FAQ</p>
+            </li>
+        
+            <li>
+                <a href="#"><img src="img_nonorder/f5.png" alt="서비스 센터 찾기"></a>
+                <p>서비스 센터 찾기</p>
+            </li>
+        </ul>
+    </div>
+
+    <script src="js/bn.js"></script>
+    
+
+<footer>
+    <div class="f1">
+        <ul>
+            <li>이용약관</li>
+            <li>개인정보취급방침</li>
+            <li>안전보건방침</li>
+        </ul>
+    </div>
+
+    <div class="f2">
+            <h4>사업자 정보</h4>
+            <p>(주)위닉스판교지점 대표이사 : 윤철민</p>
+            <p>사업자 등록번호 : 129-85-31193 <br>통신 판매업 신고 : 2014-경기성남-1186</p>
+            <p>사업장소재지 : 경기 성남시 분당구 하오개로344번길 6 위닉스판교지점</p>
+            <p>본점 소재지 : 경기도 화성시 수정로 80-13 위닉스</p>
+            <p>이메일 : winix@winix.com 대표번호 : 1544-5081</p>
+            <p>호스팅서비스사업자 : 네이버클라우드</p>
+    </div>
+
+    <div class="f3">
+            <h4>고객지원</h4>
+            <p class="fu">위닉스 고객만족센터 1544-5081</p>
+            <p>월요일~금요일 09:00~18:00</p>
+            <p>토요일 09:00~13:00(일요일,공휴일 휴무)</p>
+    </div>
+</footer>
+
+ <?php include "bar.php"; ?>
+
+</body>
+</html>

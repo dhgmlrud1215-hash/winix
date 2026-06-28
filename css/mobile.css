@@ -1,0 +1,195 @@
+@charset "utf-8";
+
+*,*:after, *:before {box-sizing: border-box;}
+a {text-decoration: none;color: black; 
+    font-family: 'Noto Sans', sans-serif;}
+p {font-family: 'Noto Sans', sans-serif;}
+h2 {color: rgba(63, 91, 216, 0.75); margin-bottom: 10px;}
+button {background: none; border: none; cursor: pointer;}
+
+
+#head {width: 100%; background: #fff; top: 0px; 
+       z-index: 999; position: fixed;  }
+.top ul {display: flex; justify-content:space-between; margin-top: 20px; 
+align-items: center;}
+.top ul li {margin-top: 10px;}
+.top img {width: 40px; height: 40px; margin-top: 3px; }
+.logo {font-size: 1.9rem; font-weight: bold; }
+span {color: rgba(63, 91, 216, 0.75);}
+.pr {width: 40px; height: 40px; border: 1px solid #000;
+    border-radius: 50%; text-align: center; line-height: 1.1;
+    margin-right: 5px;}
+.pr a {font-size: 0.8rem;}
+
+#menu {z-index: 100000; width: 240px; border: 1px solid rgba(0,0,0,0.3);
+background: #fff; height: 100%; position: fixed;left: 0; top: 20px;
+border-left: none; border-top: none; left: -240px;
+ /*left: 0;*/}
+
+.mm {display: flex; left:0; margin-top: 40px; gap: 50px; }  
+.mlogo {font-weight: bold; font-size: 1.6rem;}
+.arrow {position: relative; bottom: 2px; left: 10px; font-size: 1.6rem;}
+.search { height: 30px; display: flex; margin-top: 15px;}
+input {border: 1px solid #333; border-radius: 30px; text-align: center; margin-left: 15PX;}
+
+#menu li{ font-size: 1.2rem;}
+#menu >ul {margin-left: 20px;}
+#menu >ul>li {padding-top: 20px; }
+#menu >ul>li>a {font-weight: bold; }
+#menu ul li ul li {text-indent: 10px;}
+.sub li {line-height: 1.6;}
+.sub li a {font-size: 1rem;} 
+#menu ul li ul {display: none;}      
+
+#mainbanner {width:100%;overflow: hidden;position: relative; top: 50px;}
+#mainbanner img {width:100%;}
+.slider {position:relative; left:0;width:600%;display:flex;}
+.slider li {width:16.66%;}
+
+
+#idc {width: 2rem; height: 0.8rem; position: absolute;
+    bottom: 1rem; left: 50%; margin-left: -2rem; display: flex; gap: 5px;}
+#idc>div {opacity: 0.6;}
+#idc>div.idc_on {opacity: 1;}
+#idc div:nth-child(2) {margin: 0 0 0.75rem;}
+#idc div a {display:block; width: 0.4rem; height: 0.4rem;
+            border-radius: 0.6rem; background: #fff;}
+
+#maincate {text-align: center; margin-top: 80px;}
+.mgroup {display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;} 
+.mgroup li {width: 40%; margin-bottom: 20px; font-weight: 400;}
+.mgroup img {width: 100%;}
+
+
+.mbtn {border: 1px solid rgba(0,0,0,0.3); border-radius: 5px ; background: #fff;
+        font-size: 1rem; padding: 3px 40px;  
+        margin-top: 20px; cursor: pointer;}
+
+
+#mbest {text-align: center; position: relative;}
+#mbest h2 {margin: 50px 0 30px 0;} 
+.bestslider {overflow: hidden; overflow: hidden;}
+.bestslider ul {display: flex; width: 200%;}
+.bestslider ul li {width: 40%; background:#F4F6F8; margin: 15px;
+                border-radius: 30px;}
+.bestslider ul li a {position: relative; bottom: 20px; font-weight: 500;}
+.bestslider img {width: 100%; }
+
+
+#mbest button {background: none; border: none; font-size: 1.2rem;
+ position: absolute; top: 60%; cursor: pointer; color:  #9e9999;;
+transform:translateY(-50%);}
+.bleft {left: 0;}
+.bright {right:0;}
+
+
+#mevent {position: relative;}
+#mevent h2 {margin-top: 20px; text-align: center; margin-top: 50px;}
+.evslider {position: relative; width: 100%;overflow: hidden;}
+.evslider ul {position:relative; left:0;width:400%;display:flex;transition: transform 0.3s ease-in-out ;}
+.evslider li {width:25%;}
+.evslider img {width: 100%; }
+
+#mevent button {background: none; border: none; font-size: 1.2rem;
+position: absolute; top: 60%;cursor: pointer; color: #9e9999;
+transform:translateY(-50%); z-index: 9999;} 
+.eleft {left: 0; }
+.eright {right: 0;}
+
+#mreview {margin-left:auto; margin-right:auto; overflow: hidden; margin-top: 50px;}
+#mreview h2 { text-align: center; margin-top: 30px; margin-bottom: 20px;}
+.reslider {position: relative; transition: trandform 0.3s ease-in-out ;width: 200%;}
+.mrgroup { display: flex;  gap: 10px; margin-left: 5px;}
+.re {width: 40%; }
+.re p {padding: 10px; height: auto;}
+.re ul { /*margin: 10px 5px 20px 5px;*/
+        transition: transform 0.3s ease-in-out ;  }
+.mrgroup img {width: 100%; }
+.r  {border: #8FAEDC solid 1px; padding: 10px; margin-bottom: 20px;}
+.rm img {width: 60px; height: 60px; 
+        margin-right: 5px; margin-top: 10px; }
+.rm a {display: flex; font-size: 0.7rem; align-items: center; text-align: left; line-height: 1.5;}
+.rm {background:#F2F2F2 ;padding-bottom: 20px; align-items: center; justify-content: space-between; }
+.re button {border: 1px solid #333;
+        border-radius: 40px; background: #fff; position: relative;left: 60px; bottom: 30px;}
+
+.releft, .reright {left: 5px; font-size: 1.2rem; position: absolute; 
+        top: 50%; color: #000; transform: translateY(-50%);}
+.releft {left: 0;}
+.reright {right: 50px;}
+
+.scroll-container {position: relative; width: 100%; height: 50px;}
+.scroll-container >.mtop {border: 1px solid #333; border-radius: 50%; font-size: 20px;
+width: 30px; height: 30px; padding-bottom: 10px; position: absolute; 
+right: 10px;}
+
+.box{display: grid; justify-content: center; align-items: center;
+    grid-template-columns: repeat(2,auto); background:#EAF1F8 ;
+    padding: 30px; gap: 20px;  text-align: center; margin-bottom: 30px;}
+.box ul { border: 1px solid #fff; width: 120px;
+    height: 100px; background: #fff; border-radius: 10px; }
+.box ul li {position: relative; top: 20px; font-size: .9rem; }
+.box img {width: 36px}
+
+
+
+footer { height: 400px; text-align: center;  }
+.f1 ul {display: flex; font-size: .9rem; font-weight: bold; justify-content: center;
+        gap: 10px; margin-bottom: 20px;}
+
+.f2 {margin-bottom: 15px;}
+.f2 ul li {font-size: .9rem; font-weight:  bold; margin-bottom: 10px;}
+.f2 p {font-size: 0.65rem; color: rgba(0,0,0,0.6);
+        line-height: 1.8;}
+
+.f3 ul li {font-size: 1rem; font-weight:  bold; margin-bottom: 10px;}
+.f3 p {font-size: 0.65rem; color: rgba(0,0,0,0.6);
+        line-height: 1.8;}
+.f3 p.fu {color: #000}
+
+.bar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background: #F2F2F2;
+    z-index: 999;
+    border-top: 1px solid #ccc;
+}
+
+.bar ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.bar ul li {
+    flex: 1;
+    text-align: center;
+}
+
+.bar a,
+.bar span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+    line-height: 1.3;
+    color: #333;
+}
+
+.bar svg {
+    width: 26px;
+    height: 26px;
+    margin-bottom: 4px;
+    stroke: #000;
+    fill: none;
+}
+.skip-link {position: absolute; left: -999px; top: auto; width: 1px;
+         height: 1px; overflow: hidden;}

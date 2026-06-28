@@ -1,0 +1,310 @@
+@charset "utf-8";
+
+*,*:after, *:before {box-sizing: border-box;}
+body {font-family: 'Noto Sans', sans-serif; 
+    text-align: center; padding-top: 25px;}
+a {text-decoration: none;color: black; }
+h2 {color: rgba(63, 91, 216, 0.75); margin-bottom: 10px;}
+button {background: none; border: none; cursor: pointer;}
+
+
+
+
+
+#sub_1head {display: flex; justify-content: center;position: relative;
+            align-items: center; margin-top: 10px; padding-bottom: 10px;
+           border-bottom: 1px solid rgba(0,0,0,0.08); width: 100%;} 
+#sub_1head > a {position: absolute; left:0; font-size: 30px; padding: 10px;}
+#sub_1head span {color:rgba(63, 91, 216, 0.75) ;}
+
+#sub_1name {margin-top: 20px; padding: 0 20px;}
+
+#sub_1name h2 {
+    color: #111;
+    font-size: 1.5rem; 
+    font-weight:600;
+    margin-bottom: 18px;
+    letter-spacing: -0.5px;
+}
+#sub_1name img {
+   width: 100%; 
+    max-width: 80%;
+
+    background: #F6F7F9;
+
+    border-radius: 20px;
+    
+
+    margin-bottom: 15px;
+    padding: 34px;
+}
+
+#sub_1group {
+     display: flex; 
+    justify-content:space-between;
+  
+    line-height: 1.5;
+    width: 80%; 
+    text-align: left;
+    margin: 0 auto; 
+    gap: 7px;
+}
+
+#sub_1group li {font-size: 0.95rem;}
+
+.sub_1_1 {text-align: left; margin-bottom: 10px;}
+
+.sub_1_1 li,
+.sub_1_1 a {
+    color: #777;
+}
+
+.sub_1_2 {text-align: right;}
+
+.sub_1_2 li {color: #111; font-weight: 500;}
+
+
+.a_b { 
+    position: static;
+    color: rgba(63,91,216,0.9) !important;
+}
+.sub_1coupon img {width: 35%; cursor: pointer;}
+.sub_1help img {cursor: pointer;}
+
+#sub_1delivery,
+.sub_1plus,
+.sub_1my {
+    padding: 24px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+#sub_1delivery h3,
+.sub_1plus h3,
+.sub_1my h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #111;
+    margin-bottom: 16px;
+    position: static;
+}
+
+#sub_1delivery {width: 80%; margin: 0 auto; text-align: left;}
+
+#sub_1delivery h3 {padding: 10px; border-top: 1px solid #F2F2F2;
+    position: relative; right: 10px;}
+
+#sub_1delivery div{display: flex; justify-content: space-between;}
+
+.d1 {text-align: end;}
+
+#sub_1delivery li {font-size: 0.95rem; line-height: 1.8;}
+
+#sub_1delivery ul:first-child li {color: #777;}
+
+#sub_1delivery ul:last-child li {
+    color: #111;
+    text-align: right;
+    font-weight: 500;
+}
+
+.sub_1plus {width: 80%; margin: 0 auto; text-align: left;
+    margin-top: 20px;}
+
+.sub_1select > select {
+    border: none; 
+    border: 1px solid rgba(0,0,0,0.14);
+    width: 100%; 
+    border-radius: 5px; 
+    padding: 7px; 
+    margin-top: 5px;
+    color: rgba(0,0,0,0.6);
+    cursor: pointer;
+}
+
+.sub_1my {width: 80%; margin: 0 auto; text-align: left; 
+        margin-top: 20px; border-bottom: 1px solid #f2f2f2;}
+.sub_1my ul {display: grid; grid-template-columns: 1fr auto auto;
+     gap: 5px;  margin-bottom: 10px;}
+.sub_1my ul li {font-size: 0.9rem;}
+
+.order-row {display: flex; gap: 10px;}
+
+.quantity {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+
+.quantity button {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+ }
+.count {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.minus {position: relative; left: 5px;}
+
+.plus {position: relative; right: 5px;}
+
+.q1 {text-align:end; margin-left:auto; font-weight: 500;}
+
+.sub_1last {padding: 22px 0;}
+
+.sub_1last ul {display: flex; width: 80%; justify-content: space-between;
+            margin: 0 auto; margin-top: 10px; margin-bottom: 20px;}
+
+.sub_1last ul li {font-size: 1.2rem; color: rgba(63,91,216,0.9);}
+
+.sub_1button {
+    width: 80%; display: flex; justify-content: space-around;
+    margin: 0 auto; margin-bottom: 80px; cursor: pointer; 
+}
+
+.sub_1button button {
+    height: 48px;
+    border-radius: 12px;
+    font-weight: 700;
+}
+
+.cart {border: 1px solid rgba(0,0,0,0.12); border-radius: 5px;
+    padding: 5px; width: 100px; background: #fff;}
+.buy {border: 1px solid #000;border-radius: 5px; text-align: center;
+    padding: 5px; width: 100px; background: #111; color: #fff;}
+
+
+.blind {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+}
+
+.bar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background: #F2F2F2;
+    z-index: 999;
+    border-top: 1px solid #ccc;
+}
+
+.bar ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.bar ul li {
+    flex: 1;
+    text-align: center;
+}
+
+.bar a,
+.bar span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+    line-height: 1.3;
+    color: #333;
+}
+
+.bar svg {
+    width: 26px;
+    height: 26px;
+    margin-bottom: 4px;
+    stroke: #000;
+    fill: none;
+}
+
+/*팝업창*/
+.sub_1help li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.sale-help-open {
+  color: #777;
+}
+
+.sale-help-icon {
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+
+
+.sale-popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(255,255,255,0.75);
+  z-index: 9999;
+}
+
+
+.sale-popup.on {
+  display: block;
+}
+
+
+.sale-popup-box {
+  width: calc(100% - 64px);
+  max-width: 380px;
+  background: #000;
+  color: #fff;
+  border-radius: 22px;
+  padding: 20px 26px 24px;
+  position: absolute;
+  left: 50%;
+  top: 120px;
+  transform: translateX(-50%);
+  text-align: left;
+}
+
+.sale-popup-box h4 {
+  margin: 0 0 28px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.sale-popup-box p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 600;
+  word-break: keep-all;
+}
+
+.sale-popup-close {
+  position: absolute;
+  right: 20px;
+  top: 14px;
+  color: #fff;
+  font-size: 34px;
+  line-height: 1;
+  padding: 0;
+}

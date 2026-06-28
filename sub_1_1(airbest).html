@@ -1,0 +1,108 @@
+<?php
+    session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css?v=3">
+    <link rel="stylesheet" href="css/common-menu.css?v=3">
+    <script src="js/common-menu.js?v=3" defer></script>
+    <link rel="stylesheet" href="css/sub_1_1(airbest).css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="sub_1_1head">
+          <a href="sub.html" aria-label="이전 페이지로 돌아가기">&larr;</a>
+            <h1>
+                <a href="main.html">WIN<span>IX</span></a>
+            </h1>
+    </header>
+
+    <section id="sub_1_1name">
+        <h2>제로S</h2>
+        <img src="img_airbest/sub-best_air1.png" alt="제로S">
+    </section>
+
+    <div id="sub_b1group">
+        <div class="sub_b1_1">
+            <ul>
+                <li>판매가</li>
+             </ul>
+        </div>
+
+        <div class="sub_b1_2">
+            <ul>
+                <li>209,000원</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="sub_b1delivery">
+        <h3>배송정보</h3>
+        <div>
+            <ul>
+               <li class="d">배송안내</li>
+               <li>배송비</li>  
+            </ul>
+
+            <ul>
+               <li class="d1">익일출고</li>
+               <li>4만원 이상 무료배송</li>  
+            </ul>
+        </div>
+    </div>
+
+    <div class="sub_b1plus">
+        <h3>추가구매 가능상품</h3>
+
+        <div class="sub_b1select">
+            <label for="piusProduct" class="blind">추가구매 가능상품</label>
+            <select id="piusProduct" name="piusProduct">
+              <option>선택해주세요.</option>
+              <option>제로S 탈취필터</option>
+              <option>제로S 집진필터</option>
+              <option>제로S 필터세트</option>
+              <option>제로S 플러스케어필터</option>
+              <option>제로S 필터세트 플러스</option>
+        </select> 
+        </div>
+    </div>
+
+    <div class="sub_b1my">
+      <h3>내 주문 상품</h3>
+
+      <div class="order-row">
+        <p>제로S</p>
+
+            <div class="quantity">
+                <button type="button" class="minus" aria-label="수량 감소">-</button>
+
+                <label for="count" class="blind" >수량</label>
+                <input type="text" id="count" value="1" class="count">
+
+                <button type="button" class="plus" aria-label="수량 증가">+</button>
+            </div>
+        <p class="q1">209,000원</p>
+        </div>
+    </div>
+
+    <div class="sub_b1last">
+    <ul>
+        <li>최종 결제 예상가</li>
+        <li>209,000원</li>
+    </ul>
+    </div>
+
+    <div class="sub_b1button">
+        <button type="button" class="cart">장바구니</button>
+        <button type="button" class="buy">구매하기</button>
+    </div>
+
+    <?php include "bar.php" ?>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<?php
+    session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css?v=3">
+    <link rel="stylesheet" href="css/common-menu.css?v=3">
+    <script src="js/common-menu.js?v=3" defer></script>
+    <link rel="stylesheet" href="css/sub_2(best).css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="sub_2head">
+        <a href="main.html" aria-label="이전 페이지로 돌아가기">&larr;</a>
+        <h1>
+            <a href="main.html">WIN<span>IX</span></a>
+        </h1>
+    </header>
+
+    <section id="sub_2name">
+        <p>BEST</p>
+        <h2>위닉스 뽀송 12L</h2>
+        <img src="img_mainbest/best1.png" alt="위닉스 뽀송 12L">
+    </section>
+
+    <section id="sub_2group">
+        <div class="sub_2_1">
+            <ul>
+                <li>정가</li>
+                <ul class="sub_2help">
+                    <li><a href="#" class="sale-help-open">할인가</a>
+                        <img src="img_airclick/help.png" alt="할인가에 대해" class="sale-help-icon"></li>
+                </ul>
+             </ul>
+        </div>
+
+        <div class="sub_2_2">
+            <ul>
+                <li>299,000원</li>
+                <li>259,000원</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="sub_2delivery">
+        <h3>배송정보</h3>
+        <div>
+            <ul>
+               <li class="d">배송안내</li>
+               <li>배송비</li>  
+            </ul>
+
+            <ul>
+               <li class="d1">익일출고</li>
+               <li>4만원 이상 무료배송</li>  
+            </ul>
+        </div>
+    </section>
+
+    <div class="sub_2plus">
+        <h3>추가구매 가능상품</h3>
+
+        <div class="sub_2select">
+        <label for="plusProduct" class="blind">추가구매 가능상품</label>
+        <select id="plusProduct" name="plusProduct">
+              <option>선택해주세요.</option>
+              <option>연속배수호스(1개 구매시 1m, 2개 구매시 2m)</option>
+        </select> 
+        </div>
+    </div>
+
+    <div class="sub_2my">
+        <h3>내 주문 상품</h3>
+        <ul>
+        <li>위닉스 뽀송 12L</li>
+            <div class="quantity">
+                <button type="button" class="minus" aria-label="수량 감소">-</button>
+
+                <label for="count"  class="blind">수량</label>
+                <input type="text" value="1" id="count" class="count">
+
+                <button type="button" class="plus">+</button>
+            </div>
+        <li class="q1">299,000원</li>
+        </ul>
+    </div>
+
+    <div class="sub_2last">
+    <ul>
+        <li>최종 결제 예상가</li>
+        <li>299,000원</li>
+    </ul>
+    </div>
+
+    <div class="sub_2button">
+        <button class="cart">장바구니</button>
+        <button class="buy">구매하기</button>
+    </div>
+
+    <?php include "bar.php"; ?>
+
+
+
+
+
+    <div class="sale-popup" id="salePopup">
+  <div class="sale-popup-box">
+    <button type="button" class="sale-popup-close" aria-label="닫기">×</button>
+
+    <h4>할인가</h4>
+    <p>할인가는 로그인 시 회원에게 적용되는 혜택 가격입니다.</p>
+  </div>
+</div>
+
+<script>
+  const saleOpen = document.querySelector('.sale-help-open');
+  const saleIcon = document.querySelector('.sale-help-icon');
+  const salePopup = document.querySelector('#salePopup');
+  const saleClose = document.querySelector('.sale-popup-close');
+
+  function openSalePopup(e) {
+    e.preventDefault();
+    salePopup.classList.add('on');
+  }
+
+  saleOpen.addEventListener('click', openSalePopup);
+  saleIcon.addEventListener('click', openSalePopup);
+
+  saleClose.addEventListener('click', function () {
+    salePopup.classList.remove('on');
+  });
+
+  salePopup.addEventListener('click', function (e) {
+    if (e.target === salePopup) {
+      salePopup.classList.remove('on');
+    }
+  });
+</script>
+</body>
+
+ 
+</html>

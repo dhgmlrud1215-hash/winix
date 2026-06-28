@@ -1,0 +1,165 @@
+@charset "utf-8";
+
+@charset "utf-8";
+
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding-top: 25px;
+    background: #fff;
+    font-family: 'Noto Sans', sans-serif;
+    color: #111;
+}
+
+a {text-decoration: none;color: #111;}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.memtop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 12px 20px 18px;
+}
+
+.memtop h2 {
+    margin: 0;
+    color: #111;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.memtop button {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 28px;
+    color: #111;
+}
+
+.member img {width: 100%; display: block;}
+
+.memgroup {padding: 24px 20px;}
+
+.memgroup p,
+.addr-group {
+    margin: 0 0 18px;
+}
+
+.memgroup label,
+.addr-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #222;
+}
+
+.memgroup input,
+.addr-group input {
+    display: block;
+    width: 100%;
+    height: 42px;
+    padding: 0 12px;
+    margin-top: 0;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f7f7f7;
+
+    font-size: 14px;
+    color: #111;
+}
+
+.memgroup input::placeholder,
+.addr-group input::placeholder {
+    color: #aaa;
+}
+
+.memgroup input:focus,
+.addr-group input:focus {
+    outline: none;
+    border-color: #000;
+    background: #fff;
+}
+
+
+.addr-group input {
+    margin-bottom: 10px;
+}
+
+
+.mem_btn {
+    margin: 10px 20px 80px;
+}
+
+.mem_btn button {
+    width: 100%;
+    height: 46px;
+
+    border-radius: 10px;
+    background: #000;
+    color: #fff;
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.mem_btn button:hover {
+    background: #333;
+}
+      
+.bar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background: #F2F2F2;
+    z-index: 999;
+    border-top: 1px solid #ccc;
+}
+
+.bar ul {
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.bar ul li {
+    flex: 1;
+    text-align: center;
+}
+
+.bar a,
+.bar span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 11px;
+    line-height: 1.3;
+    color: #333;
+}
+
+.bar svg {
+    width: 26px;
+    height: 26px;
+    margin-bottom: 4px;
+    stroke: #000;
+    fill: none;
+}

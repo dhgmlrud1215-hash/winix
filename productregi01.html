@@ -1,0 +1,66 @@
+<?php
+    session_start();
+?>
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css?v=3">
+    <link rel="stylesheet" href="css/common-menu.css?v=3">
+    <script src="js/common-menu.js?v=3" defer></script>
+    <link rel="stylesheet" href="css/productregi01.css?v=10">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+ <header id="product1">
+    <a href="main.html" class="arrow" aria-label="메인으로 돌아가기">&#8592;</a>
+    <h1><a href="main.html">WIN<span>IX</span></a></h1>
+ </header>
+
+ <div class="register">
+    <h2>당신의 위닉스를<br>제품등록을 통해서 관리해야 하는 이유</h2> 
+    <ul class="re">
+        <li><img src="img_product/p1.png" alt="보증 및 A/S 보장">
+            <p class="rename">보증 및 A/S 보장</p>
+            <p class="resub">구입하신 제품이 등록되어 (주)위닉스에서 제공되는 
+            <br>보증 및 A/S를 받을 권리를 보장받게 됩니다.
+            </p>
+        </li>
+
+        <li><img src="img_product/p2.png" alt="효율적인 제품 맞춤 관리">
+            <p class="rename">효율적인 제품 맞춤 관리</p>
+            <p class="resub">등록된 제품 내역을 언제든지 확인할 수 있어
+            <br>제품 관리에 효율적입니다.
+            </p>
+        </li>
+
+        <li><img src="img_product/p3.png" alt="다양한 이벤트에 참여">
+            <p class="rename">다양한 이벤트에 참여</p>
+            <p class="resub">다양한 이벤트에 참여하실 수 있으며,
+            새로운 위닉스 제품에 대한 정보를 받으실 수 있습니다.
+            </p>
+        </li>
+    </ul>
+</div>
+
+<div class="my_register">
+    <h2>내가 등록한 제품</h2>
+        <ul>
+            <li>
+                <a href="productregi02.html" class="regi_link">
+                    <img src="img_product/plus.png" alt="" aria-hidden="true">
+                    <p>제품을 등록하고 구매 정보와 관리를 한 번에 확인해보세요.</p>
+                    <span class="regi_btn">내 제품 등록하기</span>
+                </a>
+            </li>
+        </ul>
+</div>
+
+    <?php include "bar.php"; ?>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css?v=3">
+    <link rel="stylesheet" href="css/common-menu.css?v=3">
+    <script src="js/common-menu.js?v=3" defer></script>
+    <link rel="stylesheet" href="css/cart.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="ctop">
+        <a href="main.html" aria-label="이전 페이지로 이동">&larr;</a>
+        <h2>장바구니</h2>
+    </div>
+
+    <div class="cgroup1">
+        <h3>완제품/소모품 장바구니</h3>
+        <ul class="c_p1">
+            <li>
+                <label> 
+                    <input type="checkbox" class="c_check">
+                    <span>전체선택(1/1)</span>
+                </label>
+                <button type="button" class="c_r">선택삭제</button>
+            </li>
+        </ul>
+
+        <div class="c_p2">
+                <ul class="c_p2left">
+                    <li>
+                        <label>
+                            <input type="checkbox" class="c_check">
+                            <span class="blind">MOOS 무스 미니 제습기 선택</span>
+                        </label>
+                        <img src="img_cartorder/c1.png" alt="MOOS미니제습기">
+                    </li>
+                </ul>
+
+                <ul class="c_p2rt">
+                    <li>
+                        <p>MOOS 무스 미니 제습기 <br>1인가구 옷장용 신발장 욕실용</p>
+                        <p  class="c_n">MSDNG30-OWK</p>
+                    
+                        <ul class="c_p2rb">
+                            <li>
+                                <p class="c_n">수량1개</p>
+                                <p>79,000원</p>
+                            </li>
+                        </ul>
+                </li>
+                </ul>
+
+            
+                <div class="quantity">
+                     <button type="button" class="minus" aria-label="수량 감소">-</button>
+                     <label for="count" class="blind">상품 수량</label>
+                        <input type="text" id="count" value="1" class="count">
+                     <button type="button" class="plus" aria-label="수량 증가">+</button>
+                </div>
+        </div>
+    </div>
+
+    <div class="cgroup2">
+        <h3>서비스장바구니</h3>
+        <ul class="c_p1">
+            <li>
+                <label>
+                    <input type="checkbox" class="c_check">
+                    <span>전체선택(0/0)</span>
+                </label>
+                <button type="button" class="c_r">선택삭제</button>
+            </li>
+        </ul>
+        <p>장바구니에 담긴 상품이 없습니다.</p>
+    </div>
+
+    <div class="cbottom">
+        <ul>
+            <li>주문수량</li>
+            <li>상품금액</li>
+            <li>배송비</li>
+            <li class="cb_1">결정예정금액</li>
+        </ul>
+
+        <ul>
+            <li class="cm">1개</li>
+            <li>79,000원</li>
+            <li class="cm">0원</li>
+            <li class="cb_1">79,000원</li>
+        </ul>
+        
+    </div>
+    
+    <div class="cartbutton">
+        <a href="order.html">주문하기</a>
+    </div>
+
+    <?php include "bar.php";?>
+</body>
+
+</html>

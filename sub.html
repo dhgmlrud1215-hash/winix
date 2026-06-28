@@ -1,0 +1,316 @@
+<?php
+    session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css?v=3">
+    <link rel="stylesheet" href="css/common-menu.css?v=3">
+    <script src="js/common-menu.js?v=3" defer></script>
+    <link rel="stylesheet" href="css/sub.css">
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/sub-slider.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+
+</head>
+<body>
+     <header id="airhead">
+            <a href="main.html" aria-label="이전 페이지로 돌아가기">&larr;</a>
+            <h1>공기청정기</h1>
+     </header>
+
+     <section id="airbn">
+        <img src="img_air/sub_air_main.png" alt="공기청정기 메인배너">
+     </section>
+
+     <section id="air_best">
+        <h2>인기 제품</h2>
+        <button type="button" class="airleft" aria-label="이전 인기상품 보기">&lt;</button>
+
+       <div class="air-wrap"> 
+         <ul class="airbest-slider">
+            <li>
+                <a href="sub_1_1(airbest).html"><img src="img_air/sub-best_air1.png" alt="제로S"></a>
+                <p>제로S</p>
+            </li>
+
+            <li>
+                <a href="#"><img src="img_air/sub_best_air2.png" alt="타워 엣지(화이트)"></a>
+                <p>타워 엣지(화이트)</p>
+            </li>
+
+            <li>
+                <a href="#"><img src="img_air/sub_best_air_3.png" alt="타워 프라임"></a>
+                <p>타워프라임</p>
+            </li>
+
+            <li>
+                <a href="#"><img src="img_air/sub_best_air4.png" alt="타워프라임 플러스 "></a>
+                <p>타워프라임 플러스</p>
+            </li>
+         </ul>
+       </div>  
+
+        <button type="button" class="airright" aria-label="다음 인기상품 보기">&gt;</button>
+     </section>
+
+     <div class="select">
+        <label for="sortProduct" class="blind">상품 정렬</label>
+        <select id="sortProduct" name="sortProduct">
+              <option>신상품순</option>
+              <option>인기순</option>
+              <option>가격높은순</option>
+              <option>가격낮은순</option>
+        </select> 
+     </div>
+
+     <section id="air-group">
+        <div class="ag1">
+            <p class="badge">쿠폰</p>
+
+            <div class="airname">
+                    <a href="sub_1(air).html">
+                        <img src="img_air/air_1.png" alt="타워프라임 플러스(실버)">
+                    </a>
+                    <p>
+                        타워프라임 플러스(실버)<br>
+                        <span class="model"> ATTM115-MSK</span>
+                    </p>
+            </div>        
+
+            <div class="a1_p">
+                <ul class="price1">
+                    <li>정상가</li>
+                    <li class="a_b">할인가</li>
+                    <li>최대혜택가</li>
+                </ul>
+
+                <ul class="price2">
+                    <li>599,000</li>
+                    <li class="a_b">519,000</li>
+                    <li>490,000</li>
+                </ul>
+            </div>
+            <button class="airbtn">구매하기</button>
+        </div>
+
+        <div class="ag1">
+            <p class="badge">쿠폰</p>
+
+            <div class="airname">
+                    <a href="#">
+                        <img src="img_air/air_2.png" alt="타워프라임 플러스">
+                    </a>
+                    <p>
+                        타워프라임 플러스<br>
+                        <span class="model">ATTM115-MWK</span>
+                    </p>
+            </div>
+
+            <div class="a1_p">
+                <ul class="price1">
+                    <li>정상가</li>
+                    <li class="a_b">할인가</li>
+                    <li>최대혜택가</li>
+                </ul>
+
+                <ul class="price2">
+                    <li>579,000</li>
+                    <li class="a_b">519,000</li>
+                    <li>490,000</li>
+                </ul>
+            </div>
+
+            <button class="airbtn">구매하기</button>
+        </div>
+
+        <div class="ag1">
+            <p class="badge">쿠폰</p>
+
+            <div class="airname">
+                <a href="#">
+                    <img src="img_air/air_3.png" alt="타워엣지 컴팩트">
+                </a>
+                <p>
+                    타워엣지 컴팩트<br>
+                    <span class="model">AT5M200-MWK</span>
+                </p>
+            </div>
+
+            <div class="a1_p">
+                <ul class="price1">
+                    <li>판매가</li>
+                    <li>최대혜택가</li>
+                </ul>
+
+                <ul class="price2">
+                    <li>169,000</li>
+                    <li>129,000</li>
+                </ul>
+            </div>
+            <button class="airbtn">구매하기</button>
+        </div>
+
+        <div class="ag1">
+            <p class="badge">쿠폰</p>
+
+            <div class="airname">
+                <a href="#">
+                    <img src="img_air/air_4.png" alt="타워엣지 (화이트)">
+                </a>
+                <p>
+                    타워엣지 (화이트)<br>
+                    <span class="model">AT8E430-MWK</span>
+                </p>
+            </div>
+
+            <div class="a1_p">
+                <ul class="price1">
+                    <li>판매가</li>
+                    <li>최대혜택가</li>
+                </ul>
+
+                <ul class="price2">
+                    <li>279,000</li>
+                    <li>199,000</li>
+                </ul>
+            </div>
+            <button class="airbtn">구매하기</button>
+        </div>
+
+        <div class="ag1">
+            <p class="badge">쿠폰</p>
+
+            <div class="airname">
+                <a href="#">
+                    <img src="img_air/air_5.png" alt="타워엣지(실버)">
+                </a>
+                <p>
+                    타워엣지 (실버)<br>
+                    <span class="model">AT8E430-MSK</span>
+                </p>
+            </div>
+
+            <div class="a1_p">
+                <ul class="price1">
+                    <li>판매가</li>
+                    <li>최대혜택가</li>
+                </ul>
+
+                <ul class="price2">
+                    <li>279,000</li>
+                    <li>199,000</li>
+                </ul>
+            </div>
+            <button class="airbtn">구매하기</button>
+        </div>
+
+        <div class="ag1">
+            <p class="badge">쿠폰</p>
+
+            <div class="airname">
+                <a href="#">
+                    <img src="img_air/air_6.png" alt="제로S (선샤인민트)">
+                </a>
+                <p>
+                    제로S (선샤인민트)<br>
+                    <span class="model">AZSE430-LMK</span>
+                </p>
+            </div>
+
+            <div class="a1_p">
+                <ul class="price1">
+                    <li>판매가</li>
+                    <li>최대혜택가</li>
+                </ul>
+
+                <ul class="price2">
+                    <li>209,000</li>
+                    <li>129,000</li>
+                </ul>
+            </div>
+            <button class="airbtn">구매하기</button>
+        </div>
+
+        <div class="ag1">
+            <div class="airname">
+                <a href="#">
+                    <img src="img_air/air_7.png" alt="타워프라임">
+                </a>
+                <p>
+                    타워프라임<br>
+                    <span class="model">APRM833-JWK</span>
+                </p>
+            </div>
+
+            <div class="a1_p">
+                <ul class="price1">
+                    <li>정상가</li>
+                    <li class="a_b">할인가</li>
+                </ul>
+
+                <ul class="price2">
+                    <li>499,000</li>
+                    <li class="a_b">399,000</li>
+                </ul>
+            </div>
+            <button class="airbtn">구매하기</button>
+        </div>
+
+        <div class="ag1">
+            <div class="airname_up">
+                <a href="#">
+                    <img src="img_air/air_8.png" alt="제로S">
+                </a>
+                <p>
+                    제로S<br>
+                    <span class="model">AZSE430-JWK</span>
+                </p>
+            </div>
+
+            <div class="a1_p">
+                <ul class="price1">
+                    <li>판매가</li>
+                </ul>
+
+                <ul class="price2">
+                    <li>209,000</li>
+                </ul>
+            </div>
+            <button class="airbtn">구매하기</button>
+        </div>
+
+         <div class="ag1">
+            <div class="airname">
+               <a href="#">
+                    <img src="img_air/air_9.png" alt="타워프라임 플러스(35평형-단독)">
+               </a>
+                <p>
+                    타워프라임 플러스<br>(35평형-단독)<br>
+                    <span class="model">ATTG115-MGK</span>
+                </p>
+            </div>
+
+            <div class="a1_p">
+                <ul class="price1">
+                    <li>정가</li>
+                    <li class="a_b">할인가</li>
+                </ul>
+
+                <ul class="price2">
+                    <li>599,000</li>
+                    <li class="a_b">499,000</li>
+                </ul>
+            </div>
+            <button type="button" class="airbtn">구매하기</button>
+        </div>
+     </section>
+
+<?php include "bar.php"; ?>
+</body>
+
+</html>

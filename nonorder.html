@@ -1,0 +1,84 @@
+<?php
+    session_start();
+?>
+
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css?v=3">
+    <link rel="stylesheet" href="css/common-menu.css?v=3">
+    <script src="js/common-menu.js?v=3" defer></script>
+    <link rel="stylesheet" href="css/nonorder.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nontop">
+        <a href="#" aria-label="이전 페이지로 이동">&larr;</a>
+        <h2>비회원 주문조회</h2>
+    </div> 
+
+<form class="non-wrap" action="#" method="post">
+    <section class="nonorder">
+        <div class="non1">
+            <ul>
+                <li>
+                    <label for="orderName">주문자명</label>
+                    <input type="text" id="orderName" name="orderName">
+                </li>
+            </ul>
+
+            <ul>
+                <li>
+                    <label for="orderNumber">주문번호</label>
+                    <input type="text" id="orderNumber" name="orderNumber">
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="non2">
+        <button type="submit">주문조회하기</button>
+    </div>
+</form>
+
+    <div class="box">
+        <ul>
+            <li>
+                <a href="#" aria-label="A/S 접수"><img src="img_nonorder/f1.png" alt=""></a>
+                <p>A/S 접수</p>
+            </li>
+       
+            <li>
+                <a href="#" aria-label="제품 FAQ"><img src="img_nonorder/f2.png" alt=""></a>
+                <p>제품 FAQ</p>
+            </li>
+        
+            <li>
+                <a href="#" aria-label="공지사항"><img src="img_nonorder/f3.png" alt=""></a>
+                <p>공지사항</p>
+            </li>
+        
+            <li>
+                <a href="#" aria-label="구매 FAQ"><img src="img_nonorder/f4.png" alt=""></a>
+                <p>구매 FAQ</p>
+            </li>
+        
+            <li>
+                <a href="#" aria-label="서비스 센터 찾기"><img src="img_nonorder/f5.png" alt=""></a>
+                <p>서비스 센터 찾기</p>
+            </li>
+        </ul>
+    </div>
+
+
+    <?php include "bar.php"; ?>
+
+</body>
+
+ 
+</html>

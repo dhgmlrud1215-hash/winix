@@ -1,0 +1,77 @@
+<?php
+    session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css?v=3">
+    <link rel="stylesheet" href="css/common-menu.css?v=3">
+    <script src="js/common-menu.js?v=3" defer></script>
+    <link rel="stylesheet" href="css/productregi02.css?v=10">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+ <header id="product2">
+        <a href="productregi01.html" class="arrow" aria-label="이전 페이지로 이동">&#8592;</a>
+        <h2>제품등록</h2>
+ </header>
+
+ <form action="#" method="post" enctype="multipart/form-data">
+
+    <div class="pr_pick">
+        <h3>제품군 선택</h3>
+        <label for="productType" class="blind">제품군 선택</label>
+        <select id="productType" name="productType">
+            <option value="">선택하기</option>
+            <option value="air">공기청정기</option>
+            <option value="dehumidifier">제습기</option>
+            <option value="windowAircon">창문형 에어컨</option>
+            <option value="dryer">건조기</option>
+            <option value="washer">세탁기</option>
+            <option value="water">정수기</option>
+            <option value="heater">온풍기기</option>
+            <option value="humidifier">가습기</option>
+            <option value="circulator">서큘레이터</option>
+        </select>
+    </div>
+
+    <div class="number">
+        <h3>시리얼넘버</h3>
+        <label for="serialNumber" class="blind">시리얼넘버</label>
+        <input type="text" id="serialNumber" name="serialNumber" placeholder="시리얼 넘버 11-13자를 입력해주세요.">
+    </div>
+
+    <div class="buydate">
+        <h3>구매년월일</h3>
+        <label for="buyDate" class="blind">구매년월일</label>
+        <input type="date" id="buyDate" name="buyDate">
+    </div>
+
+    <div class="buyplace">
+        <h3>구매장소</h3>
+        <label for="buyPlace" class="blind">구매장소</label>
+        <input type="text" id="buyPlace" name="buyPlace">
+    </div>
+
+    <div class="receipt">
+        <h3>영수증첨부</h3>
+        <label for="receiptFile" class="rebox" aria-label="영수증 파일 업로드">+</label>
+        <input type="file" id="receiptFile" name="receiptFile" class="blind">
+    </div>
+
+    <div class="pro2btn">
+        <a href="productregi01.html" class="cancel">취소</a>
+        <button type="submit" class="complete">완료</button>
+    </div>
+
+</form>
+
+<?php include "bar.php"; ?> 
+
+</body>
+
+</html>
