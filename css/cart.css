@@ -108,16 +108,21 @@ body {padding-top: 25px;}
 
 .quantity {
     display: flex;
-    align-items:flex-end;
-    justify-content:flex-end;
+    align-items: center;
+    justify-content: flex-end;
     gap: 6px;
-     width: 100%;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+.quantity form {
+    flex: 0 0 auto;
 }
 
 .quantity button,
 .count {
-  width: 25px;
-  height: 25px;
+  width: 28px;
+  height: 28px;
   border: 1px solid #ddd;
   background: #fff;
   font-size: 0.9rem;
@@ -188,4 +193,15 @@ body {padding-top: 25px;}
     margin-bottom: 4px;
     stroke: #000;
     fill: none;
+}
+.cart-delete-btn {
+    min-width: 44px;
+    height: 28px;
+    padding: 0 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #fff;
+    color: #555;
+    font-size: 0.78rem;
+    white-space: nowrap;
 }

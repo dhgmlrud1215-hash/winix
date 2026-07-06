@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 session_start();
 
 if (!isset($_SESSION['userid'])) {
@@ -108,7 +108,7 @@ mysqli_close($connect);
                     </form>
                     <form action="cart_delete.php" method="post">
                         <input type="hidden" name="cart_id" value="<?= intval($item['cart_id']) ?>">
-                        <button type="submit" class="c_r">삭제</button>
+                        <button type="submit" class="cart-delete-btn">삭제</button>
                     </form>
                 </div>
             </div>
@@ -145,7 +145,7 @@ mysqli_close($connect);
     </div>
 
     <div class="cartbutton">
-        <a href="../order.html">주문하기</a>
+        <a href="order.php">주문하기</a>
     </div>
 
     <?php include "bar.php"; ?>
