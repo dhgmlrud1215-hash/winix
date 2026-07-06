@@ -2,7 +2,7 @@
 session_set_cookie_params([
     'lifetime' => 0,
     'path' => '/',
-    'secure' => true,      // HTTPS 필수
+    'secure' => true,      // HTTPS ?�수
     'httponly' => true,
     'samesite' => 'None'
 ]);
@@ -17,7 +17,7 @@ $id = $_POST['id'];
 if(!$id) {
     echo ("
         <script>
-            window.alert('아이디를 입력하세요');
+            window.alert('?�이?��? ?�력?�세??);
             history.go(-1);
         </script>    
     ");
@@ -28,7 +28,7 @@ $pass = $_POST['pass'];
 if(!$pass) {
     echo ("
         <script>
-            window.alert('비밀번호를 입력하세요');
+            window.alert('비�?번호�??�력?�세??);
             history.go(-1);
         </script>    
     ");
@@ -45,7 +45,7 @@ $num_match = mysqli_num_rows($result);
 if(!$num_match) {
     echo ("
         <script>
-            window.alert('등록되지 않은 아이디입니다');
+            window.alert('?�록?��? ?��? ?�이?�입?�다');
             history.go(-1);
         </script>    
     ");
@@ -58,7 +58,7 @@ if(!$num_match) {
     if($pass != $db_pass) {
         echo ("
             <script>
-                window.alert('비밀번호가 틀립니다');
+                window.alert('비�?번호가 ?�립니??);
                 history.go(-1);
             </script>
         ");
@@ -73,7 +73,7 @@ if(!$num_match) {
 
     echo("
         <script>
-            location.href='main.html';
+            location.href='../main.html';
         </script>
     ");
 

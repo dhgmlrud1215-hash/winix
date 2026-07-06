@@ -1,4 +1,4 @@
-<?php
+﻿<?php
     session_start();
 ?>
 
@@ -19,74 +19,74 @@
 </head>
 <body>
      <header id="airhead">
-            <a href="main.html" aria-label="이전 페이지로 돌아가기">&larr;</a>
-            <h1>공기청정기</h1>
+            <a href="main.html" aria-label="?댁쟾 ?섏씠吏濡??뚯븘媛湲?>&larr;</a>
+            <h1>怨듦린泥?젙湲?/h1>
      </header>
 
      <section id="airbn">
-        <img src="img_air/sub_air_main.png" alt="공기청정기 메인배너">
+        <img src="img_air/sub_air_main.png" alt="怨듦린泥?젙湲?硫붿씤諛곕꼫">
      </section>
 
      <section id="air_best">
-        <h2>인기 제품</h2>
-        <button type="button" class="airleft" aria-label="이전 인기상품 보기">&lt;</button>
+        <h2>?멸린 ?쒗뭹</h2>
+        <button type="button" class="airleft" aria-label="?댁쟾 ?멸린?곹뭹 蹂닿린">&lt;</button>
 
        <div class="air-wrap"> 
          <ul class="airbest-slider">
             <li>
-                <a href="sub_1_1(airbest).html"><img src="img_air/sub-best_air1.png" alt="제로S"></a>
-                <p>제로S</p>
+                <a href="sub_1_1(airbest).html"><img src="img_air/sub-best_air1.png" alt="?쒕줈S"></a>
+                <p>?쒕줈S</p>
             </li>
 
             <li>
-                <a href="#"><img src="img_air/sub_best_air2.png" alt="타워 엣지(화이트)"></a>
-                <p>타워 엣지(화이트)</p>
+                <a href="#"><img src="img_air/sub_best_air2.png" alt="????ｌ?(?붿씠??"></a>
+                <p>????ｌ?(?붿씠??</p>
             </li>
 
             <li>
-                <a href="#"><img src="img_air/sub_best_air_3.png" alt="타워 프라임"></a>
-                <p>타워프라임</p>
+                <a href="#"><img src="img_air/sub_best_air_3.png" alt="????꾨씪??></a>
+                <p>??뚰봽?쇱엫</p>
             </li>
 
             <li>
-                <a href="#"><img src="img_air/sub_best_air4.png" alt="타워프라임 플러스 "></a>
-                <p>타워프라임 플러스</p>
+                <a href="#"><img src="img_air/sub_best_air4.png" alt="??뚰봽?쇱엫 ?뚮윭??"></a>
+                <p>??뚰봽?쇱엫 ?뚮윭??/p>
             </li>
          </ul>
        </div>  
 
-        <button type="button" class="airright" aria-label="다음 인기상품 보기">&gt;</button>
+        <button type="button" class="airright" aria-label="?ㅼ쓬 ?멸린?곹뭹 蹂닿린">&gt;</button>
      </section>
 
      <div class="select">
-        <label for="sortProduct" class="blind">상품 정렬</label>
+        <label for="sortProduct" class="blind">?곹뭹 ?뺣젹</label>
         <select id="sortProduct" name="sortProduct">
-              <option>신상품순</option>
-              <option>인기순</option>
-              <option>가격높은순</option>
-              <option>가격낮은순</option>
+              <option>?좎긽?덉닚</option>
+              <option>?멸린??/option>
+              <option>媛寃⑸넂???/option>
+              <option>媛寃⑸궙???/option>
         </select> 
      </div>
 
      <section id="air-group">
         <div class="ag1">
-            <p class="badge">쿠폰</p>
+            <p class="badge">荑좏룿</p>
 
             <div class="airname">
                     <a href="sub_1(air).html">
-                        <img src="img_air/air_1.png" alt="타워프라임 플러스(실버)">
+                        <img src="img_air/air_1.png" alt="??뚰봽?쇱엫 ?뚮윭???ㅻ쾭)">
                     </a>
                     <p>
-                        타워프라임 플러스(실버)<br>
+                        ??뚰봽?쇱엫 ?뚮윭???ㅻ쾭)<br>
                         <span class="model"> ATTM115-MSK</span>
                     </p>
             </div>        
 
             <div class="a1_p">
                 <ul class="price1">
-                    <li>정상가</li>
-                    <li class="a_b">할인가</li>
-                    <li>최대혜택가</li>
+                    <li>?뺤긽媛</li>
+                    <li class="a_b">?좎씤媛</li>
+                    <li>理쒕??쒗깮媛</li>
                 </ul>
 
                 <ul class="price2">
@@ -95,27 +95,31 @@
                     <li>490,000</li>
                 </ul>
             </div>
-            <button class="airbtn">구매하기</button>
+            <form action="php/cart_add.php" method="post" class="cart-add-form">
+                <input type="hidden" name="product_id" value="1">
+                <input type="hidden" name="quantity" value="1">
+                <button type="submit" class="airbtn">장바구니</button>
+            </form>
         </div>
 
         <div class="ag1">
-            <p class="badge">쿠폰</p>
+            <p class="badge">荑좏룿</p>
 
             <div class="airname">
                     <a href="#">
-                        <img src="img_air/air_2.png" alt="타워프라임 플러스">
+                        <img src="img_air/air_2.png" alt="??뚰봽?쇱엫 ?뚮윭??>
                     </a>
                     <p>
-                        타워프라임 플러스<br>
+                        ??뚰봽?쇱엫 ?뚮윭??br>
                         <span class="model">ATTM115-MWK</span>
                     </p>
             </div>
 
             <div class="a1_p">
                 <ul class="price1">
-                    <li>정상가</li>
-                    <li class="a_b">할인가</li>
-                    <li>최대혜택가</li>
+                    <li>?뺤긽媛</li>
+                    <li class="a_b">?좎씤媛</li>
+                    <li>理쒕??쒗깮媛</li>
                 </ul>
 
                 <ul class="price2">
@@ -125,26 +129,30 @@
                 </ul>
             </div>
 
-            <button class="airbtn">구매하기</button>
+            <form action="php/cart_add.php" method="post" class="cart-add-form">
+                <input type="hidden" name="product_id" value="2">
+                <input type="hidden" name="quantity" value="1">
+                <button type="submit" class="airbtn">장바구니</button>
+            </form>
         </div>
 
         <div class="ag1">
-            <p class="badge">쿠폰</p>
+            <p class="badge">荑좏룿</p>
 
             <div class="airname">
                 <a href="#">
-                    <img src="img_air/air_3.png" alt="타워엣지 컴팩트">
+                    <img src="img_air/air_3.png" alt="??뚯뿣吏 而댄뙥??>
                 </a>
                 <p>
-                    타워엣지 컴팩트<br>
+                    ??뚯뿣吏 而댄뙥??br>
                     <span class="model">AT5M200-MWK</span>
                 </p>
             </div>
 
             <div class="a1_p">
                 <ul class="price1">
-                    <li>판매가</li>
-                    <li>최대혜택가</li>
+                    <li>?먮ℓ媛</li>
+                    <li>理쒕??쒗깮媛</li>
                 </ul>
 
                 <ul class="price2">
@@ -152,26 +160,30 @@
                     <li>129,000</li>
                 </ul>
             </div>
-            <button class="airbtn">구매하기</button>
+            <form action="php/cart_add.php" method="post" class="cart-add-form">
+                <input type="hidden" name="product_id" value="3">
+                <input type="hidden" name="quantity" value="1">
+                <button type="submit" class="airbtn">장바구니</button>
+            </form>
         </div>
 
         <div class="ag1">
-            <p class="badge">쿠폰</p>
+            <p class="badge">荑좏룿</p>
 
             <div class="airname">
                 <a href="#">
-                    <img src="img_air/air_4.png" alt="타워엣지 (화이트)">
+                    <img src="img_air/air_4.png" alt="??뚯뿣吏 (?붿씠??">
                 </a>
                 <p>
-                    타워엣지 (화이트)<br>
+                    ??뚯뿣吏 (?붿씠??<br>
                     <span class="model">AT8E430-MWK</span>
                 </p>
             </div>
 
             <div class="a1_p">
                 <ul class="price1">
-                    <li>판매가</li>
-                    <li>최대혜택가</li>
+                    <li>?먮ℓ媛</li>
+                    <li>理쒕??쒗깮媛</li>
                 </ul>
 
                 <ul class="price2">
@@ -179,26 +191,30 @@
                     <li>199,000</li>
                 </ul>
             </div>
-            <button class="airbtn">구매하기</button>
+            <form action="php/cart_add.php" method="post" class="cart-add-form">
+                <input type="hidden" name="product_id" value="4">
+                <input type="hidden" name="quantity" value="1">
+                <button type="submit" class="airbtn">장바구니</button>
+            </form>
         </div>
 
         <div class="ag1">
-            <p class="badge">쿠폰</p>
+            <p class="badge">荑좏룿</p>
 
             <div class="airname">
                 <a href="#">
-                    <img src="img_air/air_5.png" alt="타워엣지(실버)">
+                    <img src="img_air/air_5.png" alt="??뚯뿣吏(?ㅻ쾭)">
                 </a>
                 <p>
-                    타워엣지 (실버)<br>
+                    ??뚯뿣吏 (?ㅻ쾭)<br>
                     <span class="model">AT8E430-MSK</span>
                 </p>
             </div>
 
             <div class="a1_p">
                 <ul class="price1">
-                    <li>판매가</li>
-                    <li>최대혜택가</li>
+                    <li>?먮ℓ媛</li>
+                    <li>理쒕??쒗깮媛</li>
                 </ul>
 
                 <ul class="price2">
@@ -206,26 +222,30 @@
                     <li>199,000</li>
                 </ul>
             </div>
-            <button class="airbtn">구매하기</button>
+            <form action="php/cart_add.php" method="post" class="cart-add-form">
+                <input type="hidden" name="product_id" value="5">
+                <input type="hidden" name="quantity" value="1">
+                <button type="submit" class="airbtn">장바구니</button>
+            </form>
         </div>
 
         <div class="ag1">
-            <p class="badge">쿠폰</p>
+            <p class="badge">荑좏룿</p>
 
             <div class="airname">
                 <a href="#">
-                    <img src="img_air/air_6.png" alt="제로S (선샤인민트)">
+                    <img src="img_air/air_6.png" alt="?쒕줈S (?좎깶?몃???">
                 </a>
                 <p>
-                    제로S (선샤인민트)<br>
+                    ?쒕줈S (?좎깶?몃???<br>
                     <span class="model">AZSE430-LMK</span>
                 </p>
             </div>
 
             <div class="a1_p">
                 <ul class="price1">
-                    <li>판매가</li>
-                    <li>최대혜택가</li>
+                    <li>?먮ℓ媛</li>
+                    <li>理쒕??쒗깮媛</li>
                 </ul>
 
                 <ul class="price2">
@@ -233,24 +253,28 @@
                     <li>129,000</li>
                 </ul>
             </div>
-            <button class="airbtn">구매하기</button>
+            <form action="php/cart_add.php" method="post" class="cart-add-form">
+                <input type="hidden" name="product_id" value="6">
+                <input type="hidden" name="quantity" value="1">
+                <button type="submit" class="airbtn">장바구니</button>
+            </form>
         </div>
 
         <div class="ag1">
             <div class="airname">
                 <a href="#">
-                    <img src="img_air/air_7.png" alt="타워프라임">
+                    <img src="img_air/air_7.png" alt="??뚰봽?쇱엫">
                 </a>
                 <p>
-                    타워프라임<br>
+                    ??뚰봽?쇱엫<br>
                     <span class="model">APRM833-JWK</span>
                 </p>
             </div>
 
             <div class="a1_p">
                 <ul class="price1">
-                    <li>정상가</li>
-                    <li class="a_b">할인가</li>
+                    <li>?뺤긽媛</li>
+                    <li class="a_b">?좎씤媛</li>
                 </ul>
 
                 <ul class="price2">
@@ -258,47 +282,55 @@
                     <li class="a_b">399,000</li>
                 </ul>
             </div>
-            <button class="airbtn">구매하기</button>
+            <form action="php/cart_add.php" method="post" class="cart-add-form">
+                <input type="hidden" name="product_id" value="7">
+                <input type="hidden" name="quantity" value="1">
+                <button type="submit" class="airbtn">장바구니</button>
+            </form>
         </div>
 
         <div class="ag1">
             <div class="airname_up">
                 <a href="#">
-                    <img src="img_air/air_8.png" alt="제로S">
+                    <img src="img_air/air_8.png" alt="?쒕줈S">
                 </a>
                 <p>
-                    제로S<br>
+                    ?쒕줈S<br>
                     <span class="model">AZSE430-JWK</span>
                 </p>
             </div>
 
             <div class="a1_p">
                 <ul class="price1">
-                    <li>판매가</li>
+                    <li>?먮ℓ媛</li>
                 </ul>
 
                 <ul class="price2">
                     <li>209,000</li>
                 </ul>
             </div>
-            <button class="airbtn">구매하기</button>
+            <form action="php/cart_add.php" method="post" class="cart-add-form">
+                <input type="hidden" name="product_id" value="8">
+                <input type="hidden" name="quantity" value="1">
+                <button type="submit" class="airbtn">장바구니</button>
+            </form>
         </div>
 
          <div class="ag1">
             <div class="airname">
                <a href="#">
-                    <img src="img_air/air_9.png" alt="타워프라임 플러스(35평형-단독)">
+                    <img src="img_air/air_9.png" alt="??뚰봽?쇱엫 ?뚮윭??35?됲삎-?⑤룆)">
                </a>
                 <p>
-                    타워프라임 플러스<br>(35평형-단독)<br>
+                    ??뚰봽?쇱엫 ?뚮윭??br>(35?됲삎-?⑤룆)<br>
                     <span class="model">ATTG115-MGK</span>
                 </p>
             </div>
 
             <div class="a1_p">
                 <ul class="price1">
-                    <li>정가</li>
-                    <li class="a_b">할인가</li>
+                    <li>?뺢?</li>
+                    <li class="a_b">?좎씤媛</li>
                 </ul>
 
                 <ul class="price2">
@@ -306,11 +338,15 @@
                     <li class="a_b">499,000</li>
                 </ul>
             </div>
-            <button type="button" class="airbtn">구매하기</button>
+            <form action="php/cart_add.php" method="post" class="cart-add-form">
+                <input type="hidden" name="product_id" value="9">
+                <input type="hidden" name="quantity" value="1">
+                <button type="submit" class="airbtn">장바구니</button>
+            </form>
         </div>
      </section>
 
-<?php include "bar.php"; ?>
+<?php include "php/bar.php"; ?>
 </body>
 
 </html>
