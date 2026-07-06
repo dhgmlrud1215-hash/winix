@@ -1,4 +1,4 @@
-﻿<?php
+<?php
     session_start();
 ?>
 
@@ -17,88 +17,88 @@
 </head>
 <body>
     <div class="otop">
-        <a href="php/cart.php"  aria-label="?λ컮援щ땲濡??뚯븘媛湲?>&larr;</a>
-        <h2>二쇰Ц?섍린</h2>
+        <a href="php/cart.php"  aria-label="장바구니로 돌아가기">&larr;</a>
+        <h2>주문하기</h2>
     </div> 
 
 <form action="order.php" method="post">
     <section class="information1">
-        <h3>援щℓ???뺣낫</h3>
+        <h3>구매자 정보</h3>
         <div class="igroup1">
             <p>
-                <label for="buyerName">?깅챸</label>
-                <input type="text" placeholder="?깅챸" name="buyerName" id="buyerName">
+                <label for="buyerName">성명</label>
+                <input type="text" placeholder="성명" name="buyerName" id="buyerName">
             </p>
 
             <p>
-                <label for="buyerPh">?대???踰덊샇</label>
-                <input type="tel" maxlength="11" placeholder="-?놁씠 ?レ옄 ?낅젰??二쇱꽭??"
+                <label for="buyerPh">휴대폰 번호</label>
+                <input type="tel" maxlength="11" placeholder="-없이 숫자 입력해 주세요."
                  name="buyerPh" id="buyerPh">
             </p>
 
             <p>
-                <label for="email">?대찓??/label>
-                <input type="email" placeholder="?대찓???낅젰" id="email" name="email">
+                <label for="email">이메일</label>
+                <input type="email" placeholder="이메일 입력" id="email" name="email">
             </p>
         </div>
     </section>
 
     <section class="information1">
-        <h3>諛곗넚吏 ?뺣낫</h3>
+        <h3>배송지 정보</h3>
         <div class="igroup1">
             <p>
-                <label for="receiverName">?깅챸</label>
-                <input type="text" placeholder="?깅챸" name="receiverName" id="receiverName" required>
+                <label for="receiverName">성명</label>
+                <input type="text" placeholder="성명" name="receiverName" id="receiverName" required>
             </p>
 
             <p>
-                <label for="receiverPh">?대???踰덊샇</label>
-                <input type="tel" maxlength="11" placeholder="-?놁씠 ?レ옄 ?낅젰??二쇱꽭??"
+                <label for="receiverPh">휴대폰 번호</label>
+                <input type="tel" maxlength="11" placeholder="-없이 숫자 입력해 주세요."
                 name="receiverPh" id="receiverPh" required>
             </p>
 
             <p class="addressbox">
-                <label for="address1">二쇱냼</label>
+                <label for="address1">주소</label>
                 
                 <span class="addr_row">
                     <input type="text" id="address1" name="address1" required>
-                    <button type="button">?고렪踰덊샇</button>
+                    <button type="button">우편번호</button>
                 </span>
 
-                <input type="text" id="address2" name="address2" aria-label="湲곕낯二쇱냼">
+                <input type="text" id="address2" name="address2" aria-label="기본주소">
             </p>
 
             <p>
-                <label for="detail_addre">?곸꽭二쇱냼</label>
+                <label for="detail_addre">상세주소</label>
                 <input type="text" id="detail_addre" name="detail_addre">
             </p>
             
-            <label for="deliveryRequest" class="blind">諛곗넚 ?붿껌?ы빆</label>
+            <label for="deliveryRequest" class="blind">배송 요청사항</label>
             <select id="deliveryRequest" name="deliveryRequest">
-                <option>諛곗넚???붿껌?ы빆???좏깮??二쇱꽭??</option>
-                <option>臾몄븵</option>
-                <option>吏곸젒 諛쏄퀬 遺?ъ떆 臾몄븵</option>
-                <option>寃쎈퉬??/option>
-                <option>?앸같??/option>
-                <option>吏곸젒?낅젰</option>
+                <option>배송시 요청사항을 선택해 주세요.</option>
+                <option>문앞</option>
+                <option>직접 받고 부재시 문앞</option>
+                <option>경비실</option>
+                <option>택배함</option>
+                <option>직접입력</option>
             </select>
         </div>
     </section>
 
     <section class="information2">
-        <h3>二쇰Ц?곹뭹 ?뺣낫 / 珥?1媛?/h3>
+        <h3>주문상품 정보 / 총 1개</h3>
 
          <ul class="igroup2">
-             <img src="img_cartorder/c1.png" alt="MOOS 臾댁뒪 誘몃땲 ?쒖뒿湲?>
+             <img src="img_cartorder/c1.png" alt="MOOS 무스 미니 제습기">
             
              <li>
-                <p>MOOS 臾댁뒪 誘몃땲 ?쒖뒿湲?<br>1?멸?援??룹옣???좊컻???뺤떎??
+                <p>MOOS 무스 미니 제습기 <br>1인가구 옷장용 신발장 욕실용
                 <br><span class="c_n">MSDNG30-OWK</span></p>
                     
                 <ul class="ig2_1">
                     <li>
-                        <p class="c_n">?섎웾1媛?/p>
-                        <p>79,000??/p>
+                        <p class="c_n">수량1개</p>
+                        <p>79,000원</p>
                     </li>
                 </ul>
             </li>
@@ -106,68 +106,68 @@
     </section>
 
     <section class="information3">
-        <h3>寃곗젣諛⑸쾿</h3>
+        <h3>결제방법</h3>
 
         <div class="igroup3_1">
             <input type="radio" id="normalPay" name="payment" class="o_check">
-            <label for="normalPay">?쇰컲寃곗젣</label>
+            <label for="normalPay">일반결제</label>
         </div>
 
         <div class="igroup3_2">
-            <button type="button" aria-pressed="true">?좎슜/泥댄겕移대뱶</button>
-            <button type="button" aria-pressed="false">?섏씠肄?/button>
-            <button type="button" aria-pressed="false">移댁뭅?ㅽ럹??/button>
-            <button type="button" aria-pressed="false">媛?곴퀎醫?/button>
-            <button type="button" aria-pressed="false">?ㅼ씠踰꾪럹??/button>
+            <button type="button" aria-pressed="true">신용/체크카드</button>
+            <button type="button" aria-pressed="false">페이코</button>
+            <button type="button" aria-pressed="false">카카오페이</button>
+            <button type="button" aria-pressed="false">가상계좌</button>
+            <button type="button" aria-pressed="false">네이버페이</button>
         </div>
     </section>
 
     <section class="information4">
-        <h3>寃곗젣湲덉븸</h3>
+        <h3>결제금액</h3>
         <div class="igroup4">
             <ul>
-                <li>?곹뭹湲덉븸</li>
-                <li>諛곗넚鍮?/li>
-                <li>?좎씤 ?댁뿭</li>
+                <li>상품금액</li>
+                <li>배송비</li>
+                <li>할인 내역</li>
             </ul>
 
             <ul class="c_n">
-                <li>79,000??/li>
-                <li>諛곗넚鍮?臾대즺</li>
-                <li>0??/li>
+                <li>79,000원</li>
+                <li>배송비 무료</li>
+                <li>0원</li>
             </ul>
         </div>
      </section>
 
        <ul class="ig4_1">
-                <li>寃곗젣 ?덉젙 湲덉븸</li>
-                <li>79,000??/li>
+                <li>결제 예정 금액</li>
+                <li>79,000원</li>
         </ul>
 
      <div class="information5">
          <ul>
             <li>
                 <input type="checkbox" id="agree1">
-                <label for= "agree1">媛쒖씤?뺣낫 ?섏쭛 諛??댁슜???숈쓽?⑸땲??</label>
+                <label for= "agree1">개인정보 수집 및 이용에 동의합니다.</label>
             </li>
 
             <li>
                 <input type="checkbox" id="agree2">
-                <label for= "agree2">?⑥닚 蹂?ъ쑝濡??명븳 援먰솚/諛섑뭹??寃쎌슦 諛섑뭹 ?앸같鍮꾨? 李④컧??湲덉븸??
-                    ?섎텋?섎뒗 寃껋쓣 ?뺤씤?섏??듬땲??
+                <label for= "agree2">단순 변심으로 인한 교환/반품의 경우 반품 택배비를 차감한 금액이 
+                    환불되는 것을 확인하였습니다.
                 </label>
             </li>
 
             <li>
                 <input type="checkbox" id="agree3">
-                <label for= "agree3">二쇰Ц??????뺣낫瑜??뺤씤?덉쑝硫??댁뿉 ?숈쓽?⑸땲??
-                    (?꾩옄?곴굅?섎쾿 ??議?2??</label>
+                <label for= "agree3">주문에 대한 정보를 확인했으며,이에 동의합니다.
+                    (전자상거래법 제8조 2항)</label>
             </li>
          </ul>
      </div>
           
      <div class="o_btn">
-        <button type="submit">79,000??寃곗젣?섍린</button>
+        <button type="submit">79,000원 결제하기</button>
      </div>
 </form>
 
