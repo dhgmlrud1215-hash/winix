@@ -45,7 +45,7 @@ mysqli_close($connect);
     <link rel="stylesheet" href="../css/reset.css?v=3">
     <link rel="stylesheet" href="../css/common-menu.css?v=3">
     <script src="../js/common-menu.js?v=3" defer></script>
-    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../css/cart.css?v=21">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -59,8 +59,8 @@ mysqli_close($connect);
         <ul class="c_p1">
             <li>
                 <label>
-                    <input type="checkbox" class="c_check" checked>
-                    <span>전체선택(<?= count($items) ?>/<?= count($items) ?>)</span>
+                    <input type="checkbox" class="c_check cart-select-all" checked>
+                    <span id="cart-select-label">전체선택(<?= count($items) ?>/<?= count($items) ?>)</span>
                 </label>
             </li>
         </ul>
@@ -73,28 +73,19 @@ mysqli_close($connect);
 
         <?php foreach ($items as $item) { ?>
             <div class="c_p2">
-                <ul class="c_p2left">
-                    <li>
-                        <label>
-                            <input type="checkbox" class="c_check" checked>
-                            <span class="blind"><?= htmlspecialchars($item['name']) ?> 선택</span>
-                        </label>
-                        <img src="<?= htmlspecialchars($item['image']) ?>" alt="<?= htmlspecialchars($item['name']) ?>">
-                    </li>
-                </ul>
-
-                <ul class="c_p2rt">
-                    <li>
-                        <p><?= htmlspecialchars($item['name']) ?></p>
-                        <p class="c_n"><?= htmlspecialchars($item['model']) ?></p>
-                        <ul class="c_p2rb">
-                            <li>
-                                <p class="c_n">수량 <?= intval($item['quantity']) ?>개</p>
-                                <p><?= number_format($item['subtotal']) ?>원</p>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                <div class="cart-product-main">
+                    <label class="cart-check">
+                        <input type="checkbox" class="c_check cart-item-check" checked data-cart-id="<?= intval($item['cart_id']) ?>" data-quantity="<?= intval($item['quantity']) ?>" data-subtotal="<?= intval($item['subtotal']) ?>">
+                        <span class="blind"><?= htmlspecialchars($item['name']) ?> 선택</span>
+                    </label>
+                    <img class="cart-product-img" src="<?= htmlspecialchars($item['image']) ?>" alt="<?= htmlspecialchars($item['name']) ?>">
+                    <div class="cart-product-info">
+                        <p class="cart-product-name"><?= htmlspecialchars($item['name']) ?></p>
+                        <p class="cart-product-model"><?= htmlspecialchars($item['model']) ?></p>
+                        <p class="cart-product-meta">수량 <?= intval($item['quantity']) ?>개</p>
+                        <p class="cart-product-price"><?= number_format($item['subtotal']) ?>원</p>
+                    </div>
+                </div>
 
                 <div class="quantity">
                     <form action="cart_update.php" method="post">
@@ -137,16 +128,77 @@ mysqli_close($connect);
         </ul>
 
         <ul>
-            <li class="cm"><?= number_format($totalQuantity) ?>개</li>
-            <li><?= number_format($totalPrice) ?>원</li>
+            <li class="cm"><span id="cart-total-quantity"><?= number_format($totalQuantity) ?></span>개</li>
+            <li><span id="cart-total-price"><?= number_format($totalPrice) ?></span>원</li>
             <li class="cm">0원</li>
-            <li class="cb_1"><?= number_format($totalPrice) ?>원</li>
+            <li class="cb_1"><span id="cart-final-price"><?= number_format($totalPrice) ?></span>원</li>
         </ul>
     </div>
 
     <div class="cartbutton">
-        <a href="order.php">주문하기</a>
+        <a href="order.php" id="cart-order-link">주문하기</a>
     </div>
+
+<script>
+(function () {
+    const selectAll = document.querySelector('.cart-select-all');
+    const itemChecks = Array.from(document.querySelectorAll('.cart-item-check'));
+    const selectLabel = document.querySelector('#cart-select-label');
+    const totalQuantity = document.querySelector('#cart-total-quantity');
+    const totalPrice = document.querySelector('#cart-total-price');
+    const finalPrice = document.querySelector('#cart-final-price');
+    const orderLink = document.querySelector('#cart-order-link');
+
+    function formatNumber(value) {
+        return Number(value).toLocaleString('ko-KR');
+    }
+
+    function updateCartSummary() {
+        const checkedItems = itemChecks.filter((checkbox) => checkbox.checked);
+        const quantity = checkedItems.reduce((sum, checkbox) => sum + Number(checkbox.dataset.quantity || 0), 0);
+        const price = checkedItems.reduce((sum, checkbox) => sum + Number(checkbox.dataset.subtotal || 0), 0);
+        const ids = checkedItems.map((checkbox) => checkbox.dataset.cartId).filter(Boolean);
+
+        if (totalQuantity) totalQuantity.textContent = formatNumber(quantity);
+        if (totalPrice) totalPrice.textContent = formatNumber(price);
+        if (finalPrice) finalPrice.textContent = formatNumber(price);
+        if (selectLabel) selectLabel.textContent = `전체선택(${checkedItems.length}/${itemChecks.length})`;
+
+        if (selectAll) {
+            selectAll.checked = itemChecks.length > 0 && checkedItems.length === itemChecks.length;
+        }
+
+        if (orderLink) {
+            orderLink.href = ids.length > 0 ? `order.php?items=${ids.join(',')}` : '#';
+            orderLink.classList.toggle('disabled', ids.length === 0);
+        }
+    }
+
+    if (selectAll) {
+        selectAll.addEventListener('change', function () {
+            itemChecks.forEach((checkbox) => {
+                checkbox.checked = selectAll.checked;
+            });
+            updateCartSummary();
+        });
+    }
+
+    itemChecks.forEach((checkbox) => {
+        checkbox.addEventListener('change', updateCartSummary);
+    });
+
+    if (orderLink) {
+        orderLink.addEventListener('click', function (event) {
+            if (itemChecks.length > 0 && !itemChecks.some((checkbox) => checkbox.checked)) {
+                event.preventDefault();
+                alert('주문할 상품을 선택해주세요.');
+            }
+        });
+    }
+
+    updateCartSummary();
+})();
+</script>
 
     <?php include "bar.php"; ?>
 </body>
