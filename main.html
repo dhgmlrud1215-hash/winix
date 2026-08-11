@@ -32,23 +32,26 @@ session_start();
         <div class="top">
             <ul>
                 <li>
-                    <button class="hm"><img src="img/ham.png" alt="메뉴열기"></button>
+                    <button class="hm" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="menu">
+                        <img src="img/ham.png" alt="" aria-hidden="true">
+                    </button>
                 </li>
-                <li><a href="#" class="logo">WIN<span>IX</span></a></li>
-                <li class="pr"><a href="productregi01.html">제품<br>등록</a></li>
+                <li><a href="#" class="logo" aria-label="윈닉스 홈">WIN<span>IX</span></a></li>
+                <li class="pr"><a href="productregi01.html" aria-label="제품 등록 페이지로 이동">제품<br>등록</a></li>
             </ul>
         </div>
     </header>
 
-    <nav id="menu">
+    <nav id="menu" aria-label="전체 메뉴" aria-hidden="true">
         <div class="mm">
-            <button class="arrow" aria-label="전체 메뉴 닫기">&#8592;</button>
+            <button class="arrow" type="button" aria-label="전체 메뉴 닫기">&#8592;</button>
             <p class="mlogo">WIN<span>IX</span></p>
         </div>
 
     <div class="search">
-        <input type="text" placeholder="검색어를 입력하세요.">
-        <img src="img/search.png" alt="검색">
+        <label class="sr-only" for="main-search">검색어</label>
+        <input id="main-search" type="search" placeholder="검색어를 입력하세요." aria-label="검색어 입력">
+        <img src="img/search.png" alt="" aria-hidden="true">
     </div>
     
     
@@ -124,8 +127,8 @@ session_start();
     </ul>
 </nav>
 
-    <div id="mainbanner">
-        <ul class="slider">
+    <div id="mainbanner" role="region" aria-label="메인 배너">
+        <ul class="slider" aria-live="polite">
            <li> <img src="img/main1.png" alt="메인배너1"></li>
             <li><img src="img/main2.png" alt="메인배너2"></li>
             <li><img src="img/main3.png" alt="메인배너3"></li>
@@ -135,13 +138,13 @@ session_start();
         </ul>
 
         
-        <div id="idc">
-            <div class="idc_on" aria-label="1번 메인 배너 보기"><a href="#"></a></div>
-            <div><a href="#" aria-label="2번 메인 배너 보기"></a></div>
-            <div><a href="#" aria-label="3번 메인 배너 보기"></a></div>
-            <div><a href="#" aria-label="4번 메인 배너 보기"></a></div>
-            <div><a href="#" aria-label="5번 메인 배너 보기"></a></div>
-            <div><a href="#" aria-label="6번 메인 배너 보기"></a></div>
+        <div id="idc" aria-label="메인 배너 선택">
+            <button type="button" class="idc_on" aria-label="1번 메인 배너 보기" aria-pressed="true"></button>
+            <button type="button" aria-label="2번 메인 배너 보기" aria-pressed="false"></button>
+            <button type="button" aria-label="3번 메인 배너 보기" aria-pressed="false"></button>
+            <button type="button" aria-label="4번 메인 배너 보기" aria-pressed="false"></button>
+            <button type="button" aria-label="5번 메인 배너 보기" aria-pressed="false"></button>
+            <button type="button" aria-label="6번 메인 배너 보기" aria-pressed="false"></button>
         </div> 
     </div>
 

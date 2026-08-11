@@ -1,9 +1,12 @@
-document.addEventListener("DOMContentLoaded",initSlider)
+document.addEventListener("DOMContentLoaded", initSlider);
+
 function initSlider() {
     const mainImage = document.querySelector("#mainbanner");
+    if (!mainImage) return;
+
     const ul = mainImage.querySelector(".slider");
     const imgs = ul.querySelectorAll("li");
-    const idcRoll = document.querySelectorAll("#idc > div");
+    const idcRoll = document.querySelectorAll("#idc > button");
 
     let currentIndex = 0;
     const totalSlides = imgs.length;
@@ -11,47 +14,42 @@ function initSlider() {
 
     function slideTo(index) {
         if (index < 0) index = 0;
-        if (index >= totalSlides) index = totalSlides-1;
+        if (index >= totalSlides) index = totalSlides - 1;
 
-    const slideWidth = mainImage.clientWidth;
-    ul.style.transition = "left 0.5s";
-    ul.style.position = "relative";
-    ul.style.left = -(100 * index) + "%"
-    currentIndex = index;
-    updateIndicators();
+        ul.style.transition = "left 0.5s";
+        ul.style.position = "relative";
+        ul.style.left = -(100 * index) + "%";
+        currentIndex = index;
+        updateIndicators();
     }
 
-    function updateIndicators(){
-        for(let i=0; i < idcRoll.length; i++) {
-           if (i === currentIndex) {
-            idcRoll[i].classList.add("idc_on");
-           }else {
-            idcRoll[i].classList.remove("idc_on")
-           }
-                  
+    function updateIndicators() {
+        for (let i = 0; i < idcRoll.length; i++) {
+            const isActive = i === currentIndex;
+            idcRoll[i].classList.toggle("idc_on", isActive);
+            idcRoll[i].setAttribute("aria-pressed", String(isActive));
         }
     }
 
     function startAutoSlide() {
-        autoSlideInterval = setInterval(function(){
+        autoSlideInterval = setInterval(function () {
             let nextIndex = currentIndex + 1;
             if (nextIndex >= totalSlides) {
-                nextIndex = 0
+                nextIndex = 0;
             }
             slideTo(nextIndex);
         }, 3000);
     }
 
-    function stopAutoSlide(){
+    function stopAutoSlide() {
         clearInterval(autoSlideInterval);
     }
 
     function setEventListeners() {
-        const idcLinks = document.querySelectorAll("#idc div a");
-        for (let i =0; i<idcRoll.length; i++) {
-            idcRoll[i].addEventListener("click",createIdcRollclickHandler(i));
+        for (let i = 0; i < idcRoll.length; i++) {
+            idcRoll[i].addEventListener("click", createIdcRollclickHandler(i));
         }
-        window.addEventListener("resize",onResize);
+        window.addEventListener("resize", onResize);
     }
 
     function createIdcRollclickHandler(index) {
@@ -60,7 +58,7 @@ function initSlider() {
             stopAutoSlide();
             slideTo(index);
             startAutoSlide();
-        }
+        };
     }
 
     function onResize() {

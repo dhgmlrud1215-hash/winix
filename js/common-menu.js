@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     openButton.type = "button";
     openButton.setAttribute("aria-label", "메뉴 열기");
     openButton.setAttribute("aria-expanded", "false");
+    openButton.setAttribute("aria-controls", "menu");
     if (!openButton.querySelector("span")) {
       openButton.appendChild(document.createElement("span"));
     }
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     openButton.className = "site-menu-button";
     openButton.setAttribute("aria-label", "메뉴 열기");
     openButton.setAttribute("aria-expanded", "false");
+    openButton.setAttribute("aria-controls", "menu");
     openButton.innerHTML = "<span></span>";
     header.appendChild(openButton);
   }
@@ -112,6 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function openMenu() {
     drawer.classList.add("is-open");
+    drawer.setAttribute("aria-hidden", "false");
     overlay.classList.add("is-open");
     document.body.classList.add("site-menu-lock");
     openButton.setAttribute("aria-expanded", "true");
@@ -119,6 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function closeMenu() {
     drawer.classList.remove("is-open");
+    drawer.setAttribute("aria-hidden", "true");
     overlay.classList.remove("is-open");
     document.body.classList.remove("site-menu-lock");
     openButton.setAttribute("aria-expanded", "false");
@@ -132,10 +136,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const submenu = link.nextElementSibling;
     if (!submenu) return;
 
+    link.setAttribute("aria-expanded", "false");
+
     link.addEventListener("click", function (event) {
       event.preventDefault();
-      submenu.classList.toggle("is-open");
-      submenu.style.display = submenu.classList.contains("is-open") ? "block" : "none";
+      const isOpen = submenu.classList.toggle("is-open");
+      submenu.style.display = isOpen ? "block" : "none";
+      link.setAttribute("aria-expanded", String(isOpen));
     });
   });
 
