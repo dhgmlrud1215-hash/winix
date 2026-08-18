@@ -1,11 +1,22 @@
 @charset "utf-8";
 
 *,*:after, *:before {box-sizing: border-box;}
+html, body {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+body {
+    min-width: 320px;
+    background: #efefef;
+}
 a {text-decoration: none;color: black; 
     font-family: 'Noto Sans', sans-serif;}
 p {font-family: 'Noto Sans', sans-serif;}
 h2 {color: rgba(63, 91, 216, 0.75); margin-bottom: 10px;}
 button {background: none; border: none; cursor: pointer;}
+img { max-width: 100%; display: block; }
 
 
 #head {width: 100%; background: #fff; top: 0px; 

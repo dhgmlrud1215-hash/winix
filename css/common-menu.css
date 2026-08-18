@@ -50,11 +50,11 @@
 }
 
 #head .top ul > li:nth-child(2) {
-  position: absolute;
-  left: 50%;
-  top: calc(50% + 8px);
-  margin: 0;
-  transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: calc(50% + 18px);
+    margin: 0;
+    transform: translate(-50%, -50%);
 }
 
 #head .top ul > li:first-child {
