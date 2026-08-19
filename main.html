@@ -10,6 +10,16 @@ session_start();
     <title>Document</title>
     <link rel="icon" href="img/favicon.png">
 
+    <script>
+      if ("scrollRestoration" in history) {
+        history.scrollRestoration = "manual";
+      }
+
+      window.addEventListener("pageshow", function () {
+        window.scrollTo(0, 0);
+      });
+    </script>
+
     <link rel="stylesheet" href="css/reset.css?v=4">
     <link rel="stylesheet" href="css/common-menu.css?v=5">
     <script src="js/common-menu.js?v=3" defer></script>
@@ -31,13 +41,13 @@ session_start();
     <header id="head">
         <div class="top">
             <ul>
+                <li class="pr"><a href="productregi01.html" aria-label="제품 등록 페이지로 이동">제품<br>등록</a></li>
+                <li><a href="#" class="logo" aria-label="위닉스 홈">WIN<span>IX</span></a></li>
                 <li>
                     <button class="hm" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="menu">
                         <img src="img/ham.png" alt="" aria-hidden="true">
                     </button>
                 </li>
-                <li><a href="#" class="logo" aria-label="위닉스 홈">WIN<span>IX</span></a></li>
-                <li class="pr"><a href="productregi01.html" aria-label="제품 등록 페이지로 이동">제품<br>등록</a></li>
             </ul>
         </div>
     </header>

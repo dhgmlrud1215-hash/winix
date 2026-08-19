@@ -52,14 +52,15 @@
 #head .top ul > li:nth-child(2) {
     position: absolute;
     left: 50%;
-    top: calc(50% + 18px);
+    top: 50%;
     margin: 0;
     transform: translate(-50%, -50%);
 }
 
 #head .top ul > li:first-child {
   position: absolute;
-  right: 12px;
+  left: 15px;
+  right: auto;
   top: calc(50% + 8px);
   width: 40px;
   height: 40px;
@@ -69,14 +70,16 @@
 }
 
 #head .top .hm {
-  right: 0;
+  right: 12px;
+  top: 50%;
+  transform: translateY(calc(-50% + 8px)) !important;
 }
 
 #head .top .pr {
   position: absolute;
   left: 15px;
   right: auto;
-  top: calc(50% + 8px);
+  top: 50%;
   margin: 0;
   transform: translateY(-50%);
 }
